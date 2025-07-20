@@ -1,4 +1,4 @@
-import { FaBars } from "react-icons/fa";
-import { RxCross1 } from "react-icons/rx";
+import menu from "../assets/assets_frontend/menu_icon.svg";
+import arrow_right from "../assets/assets_frontend/arrow_icon.svg";
 
-export { FaBars, RxCross1 };
+export { menu, arrow_right };

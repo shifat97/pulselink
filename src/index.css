@@ -12,12 +12,23 @@
 
     /* Font Size */
     --text-18: 18px;
+    --text-43: 43px;
+    --text-63: 63px;
 
     /* Spacing */
+    --spacing-12: 12px;
+    --spacing-14: 14px;
     --spacing-22: 22px;
 
     /* Padding */
     --spacing-10: 10px;
+    --spacing-14: 14px;
     --spacing-18: 18px;
+    --spacing-32: 32px;
     --spacing-36: 36px;
+    --spacing-45: 45px;
+    --padding-90: 90px;
+
+    /* Margin */
+    --spacing-26: 26px;
 }
