@@ -2,7 +2,7 @@ import Hamburger from "./Hamburger";
 import Logo from "./Logo";
 import Navbar from "./Navbar";
 import User from "./User";
-import { FaBars, RxCross1 } from "../constants/icons";
+import { menu } from "../constants/icons";
 import { useState } from "react";
 
 export default function Header() {
@@ -15,21 +15,11 @@ export default function Header() {
                 <Navbar />
             </div>
             <div className="lg:hidden relative">
-                {toggleHam ? (
-                    <RxCross1
-                        className="text-2xl"
-                        onClick={() => setToggleHam(!toggleHam)}
-                    />
-                ) : (
-                    <FaBars
-                        className="text-2xl"
-                        onClick={() => setToggleHam(!toggleHam)}
-                    />
-                )}
+                <img src={menu} onClick={() => setToggleHam(!toggleHam)} />
                 <div
                     className={`${
                         toggleHam ? "block" : "hidden"
-                    } bg-black/5 absolute right-0 top-15 w-[218px] rounded-sm p-2`}
+                    } bg-gray-50 absolute right-0 top-15 w-[218px] rounded-sm p-2 z-100`}
                 >
                     <Hamburger />
                 </div>
