@@ -11,9 +11,12 @@
     --color-pm-hover: #625fff;
     --color-black1: #1f2937;
     --color-gray1: #4b5563;
+    --color-purple1: #eaefff;
+    --color-purple2: #c9d8ff;
 
     /* Font Size */
     --text-18: 18px;
+    --text-22: 22px;
     --text-30: 30px;
     --text-40: 40px;
     --text-43: 43px;
@@ -23,15 +26,19 @@
     --spacing-10: 10px;
     --spacing-12: 12px;
     --spacing-14: 14px;
+    --spacing-16: 16px;
     --spacing-18: 18px;
     --spacing-22: 22px;
     --spacing-26: 26px;
     --spacing-32: 32px;
     --spacing-36: 36px;
     --spacing-38: 38px;
+    --spacing-40: 40px;
     --spacing-44: 44px;
     --spacing-45: 45px;
+    --spacing-60: 60px;
     --spacing-64: 64px;
+    --spacing-80: 80px;
     --padding-90: 90px;
     --spacing-120: 120px;
 }

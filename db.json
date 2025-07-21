@@ -1,0 +1,124 @@
+{
+    "doctors": [
+        {
+            "id": "1",
+            "name": "Dr. Richard James",
+            "type": "General physician",
+            "isTopDoctor": true,
+            "isAvailable": true,
+            "image": "./src/assets/assets_frontend/doc1.png"
+        },
+        {
+            "id": "2",
+            "name": "Dr. Richard James",
+            "type": "General physician",
+            "isTopDoctor": false,
+            "isAvailable": true,
+            "image": "./src/assets/assets_frontend/doc2.png"
+        },
+        {
+            "id": "3",
+            "name": "Dr. Richard James",
+            "type": "General physician",
+            "isTopDoctor": true,
+            "isAvailable": true,
+            "image": "./src/assets/assets_frontend/doc3.png"
+        },
+        {
+            "id": "4",
+            "name": "Dr. Richard James",
+            "type": "General physician",
+            "isTopDoctor": true,
+            "isAvailable": true,
+            "image": "./src/assets/assets_frontend/doc4.png"
+        },
+        {
+            "id": "5",
+            "name": "Dr. Richard James",
+            "type": "General physician",
+            "isTopDoctor": false,
+            "isAvailable": false,
+            "image": "./src/assets/assets_frontend/doc6.png"
+        },
+        {
+            "id": "6",
+            "name": "Dr. Richard James",
+            "type": "General physician",
+            "isTopDoctor": true,
+            "isAvailable": false,
+            "image": "./src/assets/assets_frontend/doc6.png"
+        },
+        {
+            "id": "7",
+            "name": "Dr. Richard James",
+            "type": "General physician",
+            "isTopDoctor": true,
+            "isAvailable": false,
+            "image": "./src/assets/assets_frontend/doc7.png"
+        },
+        {
+            "id": "8",
+            "name": "Dr. Richard James",
+            "type": "General physician",
+            "isTopDoctor": false,
+            "isAvailable": false,
+            "image": "./src/assets/assets_frontend/doc8.png"
+        },
+        {
+            "id": "9",
+            "name": "Dr. Richard James",
+            "type": "General physician",
+            "isTopDoctor": true,
+            "isAvailable": false,
+            "image": "./src/assets/assets_frontend/doc9.png"
+        },
+        {
+            "id": "10",
+            "name": "Dr. Richard James",
+            "type": "General physician",
+            "isTopDoctor": true,
+            "isAvailable": false,
+            "image": "./src/assets/assets_frontend/doc10.png"
+        },
+        {
+            "id": "11",
+            "name": "Dr. Richard James",
+            "type": "General physician",
+            "isTopDoctor": true,
+            "isAvailable": false,
+            "image": "./src/assets/assets_frontend/doc11.png"
+        },
+        {
+            "id": "12",
+            "name": "Dr. Richard James",
+            "type": "General physician",
+            "isTopDoctor": true,
+            "isAvailable": true,
+            "image": "./src/assets/assets_frontend/doc12.png"
+        },
+        {
+            "id": "13",
+            "name": "Dr. Richard James",
+            "type": "General physician",
+            "isTopDoctor": true,
+            "isAvailable": true,
+            "image": "./src/assets/assets_frontend/doc13.png"
+        },
+        {
+            "id": "14",
+            "name": "Dr. Richard James",
+            "type": "General physician",
+            "isTopDoctor": false,
+            "isAvailable": false,
+            "image": "./src/assets/assets_frontend/doc14.png"
+        },
+        {
+            "id": "15",
+            "name": "Dr. Richard James",
+            "type": "General physician",
+            "isTopDoctor": true,
+            "isAvailable": false,
+            "image": "./src/assets/assets_frontend/doc15.png"
+        }
+    ]
+}
