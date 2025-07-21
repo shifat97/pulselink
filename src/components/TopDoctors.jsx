@@ -4,14 +4,27 @@ import { filterByTopDoctor } from "../constants/api";
 import { ToastContainer, toast } from "../constants/toast";
 
 export default function TopDoctors() {
+    const [seeMore, setSeeMore] = useState(false);
     const [topDoctors, setTopDoctors] = useState([]);
+    const [displayDoctors, setDisplayDoctors] = useState([]);
+
+    const handleSeeMoreButton = () => {
+        setSeeMore(!seeMore);
+
+        if (!seeMore) {
+            setDisplayDoctors(topDoctors);
+        } else {
+            setDisplayDoctors(topDoctors.slice(0, 10));
+        }
+    };
 
     useEffect(() => {
         const fetchDoctors = async () => {
             try {
                 const response = await axios.get(filterByTopDoctor);
                 const data = response.data;
-                setTopDoctors(data.slice(0, 10));
+                setTopDoctors(data);
+                setDisplayDoctors(data.slice(0, 10));
             } catch (e) {
                 toast(e.message ?? "Error while fetching data!", {
                     position: "top-right",
@@ -39,13 +52,16 @@ export default function TopDoctors() {
                 Simply browse through our extensive list of trusted doctors.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-26 mt-40">
-                {topDoctors.map((doctor, index) => (
+                {displayDoctors.map((doctor, index) => (
                     <Doctor key={index} doctor={doctor} />
                 ))}
             </div>
             <div>
-                <button className="bg-purple1 py-18 px-80 rounded-full mt-60 block mx-auto cursor-pointer hover:bg-purple2">
-                    See More
+                <button
+                    onClick={handleSeeMoreButton}
+                    className="bg-purple1 py-18 px-80 rounded-full mt-60 block mx-auto cursor-pointer hover:bg-purple2"
+                >
+                    {seeMore ? "See Less" : "See More"}
                 </button>
             </div>
         </section>
