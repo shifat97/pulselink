@@ -6,7 +6,11 @@
             "type": "General physician",
             "isTopDoctor": true,
             "isAvailable": true,
-            "image": "./src/assets/assets_frontend/doc1.png"
+            "image": "./src/assets/assets_frontend/doc1.png",
+            "degrees": ["MBBS", "MD (Internal Medicine)"],
+            "description": "Dr. Richard James is a highly experienced general physician with over a decade of dedicated service in primary care. He specializes in treating common and chronic illnesses and is known for his compassionate, patient-first approach.",
+            "bookingDays": ["Sat", "Sun", "Wed"],
+            "bookingTimes": ["8:00 AM", "5:00 PM"]
         },
         {
             "id": "2",
@@ -14,7 +18,11 @@
             "type": "General physician",
             "isTopDoctor": false,
             "isAvailable": true,
-            "image": "./src/assets/assets_frontend/doc2.png"
+            "image": "./src/assets/assets_frontend/doc2.png",
+            "degrees": ["MBBS", "Diploma in Family Medicine"],
+            "description": "Dr. James provides holistic family healthcare with a focus on preventive medicine and long-term wellness. His approachable nature makes him a favorite among families and elderly patients alike.",
+            "bookingDays": ["Mon", "Thu"],
+            "bookingTimes": ["9:00 AM", "3:00 PM"]
         },
         {
             "id": "3",
@@ -22,7 +30,11 @@
             "type": "General physician",
             "isTopDoctor": true,
             "isAvailable": true,
-            "image": "./src/assets/assets_frontend/doc3.png"
+            "image": "./src/assets/assets_frontend/doc3.png",
+            "degrees": ["MBBS", "FCPS (Medicine)"],
+            "description": "With a strong academic foundation and years of clinical practice, Dr. James excels in diagnosing complex medical conditions and managing chronic diseases like diabetes, hypertension, and asthma.",
+            "bookingDays": ["Sun", "Wed", "Fri"],
+            "bookingTimes": ["10:00 AM", "6:00 PM"]
         },
         {
             "id": "4",
@@ -30,7 +42,11 @@
             "type": "General physician",
             "isTopDoctor": true,
             "isAvailable": true,
-            "image": "./src/assets/assets_frontend/doc4.png"
+            "image": "./src/assets/assets_frontend/doc4.png",
+            "degrees": ["MBBS", "MD"],
+            "description": "Dr. James blends modern clinical practices with deep empathy, ensuring his patients receive not just treatment but comprehensive care and education about their health conditions.",
+            "bookingDays": ["Tue", "Thu", "Sat"],
+            "bookingTimes": ["8:30 AM", "4:30 PM"]
         },
         {
             "id": "5",
@@ -38,7 +54,11 @@
             "type": "General physician",
             "isTopDoctor": false,
             "isAvailable": false,
-            "image": "./src/assets/assets_frontend/doc6.png"
+            "image": "./src/assets/assets_frontend/doc6.png",
+            "degrees": ["MBBS"],
+            "description": "A young and passionate physician, Dr. James is committed to improving community health. His areas of interest include respiratory infections, seasonal illnesses, and adolescent care.",
+            "bookingDays": ["Wed", "Sat"],
+            "bookingTimes": ["7:00 AM", "2:00 PM"]
         },
         {
             "id": "6",
@@ -46,7 +66,11 @@
             "type": "General physician",
             "isTopDoctor": true,
             "isAvailable": false,
-            "image": "./src/assets/assets_frontend/doc6.png"
+            "image": "./src/assets/assets_frontend/doc6.png",
+            "degrees": ["MBBS", "MD"],
+            "description": "With years of experience in both urban and rural healthcare facilities, Dr. James is adept at handling a wide range of medical issues and believes in building strong doctor-patient relationships.",
+            "bookingDays": ["Sun", "Tue"],
+            "bookingTimes": ["11:00 AM", "6:00 PM"]
         },
         {
             "id": "7",
@@ -54,7 +78,11 @@
             "type": "General physician",
             "isTopDoctor": true,
             "isAvailable": false,
-            "image": "./src/assets/assets_frontend/doc7.png"
+            "image": "./src/assets/assets_frontend/doc7.png",
+            "degrees": ["MBBS", "Diploma in Clinical Pathology"],
+            "description": "Dr. James brings clinical accuracy to his consultations, with expertise in diagnostic medicine. He often collaborates with lab specialists to provide detailed treatment insights.",
+            "bookingDays": ["Thu", "Fri"],
+            "bookingTimes": ["10:30 AM", "5:30 PM"]
         },
         {
             "id": "8",
@@ -62,7 +90,11 @@
             "type": "General physician",
             "isTopDoctor": false,
             "isAvailable": false,
-            "image": "./src/assets/assets_frontend/doc8.png"
+            "image": "./src/assets/assets_frontend/doc8.png",
+            "degrees": ["MBBS"],
+            "description": "Known for his energy and friendly manner, Dr. James offers modern, evidence-based treatment approaches. He regularly engages in patient awareness programs.",
+            "bookingDays": ["Mon", "Wed"],
+            "bookingTimes": ["9:30 AM", "3:30 PM"]
         },
         {
             "id": "9",
@@ -70,7 +102,11 @@
             "type": "General physician",
             "isTopDoctor": true,
             "isAvailable": false,
-            "image": "./src/assets/assets_frontend/doc9.png"
+            "image": "./src/assets/assets_frontend/doc9.png",
+            "degrees": ["MBBS", "MD (Internal Medicine)"],
+            "description": "Dr. James is well-versed in managing lifestyle-related illnesses and promotes a preventive approach to long-term health. He is also skilled in geriatric care.",
+            "bookingDays": ["Tue", "Fri", "Sat"],
+            "bookingTimes": ["8:00 AM", "6:00 PM"]
         },
         {
             "id": "10",
@@ -78,7 +114,11 @@
             "type": "General physician",
             "isTopDoctor": true,
             "isAvailable": false,
-            "image": "./src/assets/assets_frontend/doc10.png"
+            "image": "./src/assets/assets_frontend/doc10.png",
+            "degrees": ["MBBS", "FCPS"],
+            "description": "Respected for his diagnostic precision and patient care philosophy, Dr. James ensures his patients are fully informed and involved in every treatment decision.",
+            "bookingDays": ["Sun", "Thu"],
+            "bookingTimes": ["7:30 AM", "1:00 PM"]
         },
         {
             "id": "11",
@@ -86,7 +126,11 @@
             "type": "General physician",
             "isTopDoctor": true,
             "isAvailable": false,
-            "image": "./src/assets/assets_frontend/doc11.png"
+            "image": "./src/assets/assets_frontend/doc11.png",
+            "degrees": ["MBBS", "MD"],
+            "description": "Dr. James combines scientific rigor with clear communication, making him a reliable physician for both acute and chronic conditions in all age groups.",
+            "bookingDays": ["Mon", "Fri"],
+            "bookingTimes": ["9:00 AM", "5:00 PM"]
         },
         {
             "id": "12",
@@ -94,7 +138,11 @@
             "type": "General physician",
             "isTopDoctor": true,
             "isAvailable": true,
-            "image": "./src/assets/assets_frontend/doc12.png"
+            "image": "./src/assets/assets_frontend/doc12.png",
+            "degrees": ["MBBS", "Diploma in Geriatric Medicine"],
+            "description": "Dr. James is a compassionate doctor dedicated to elderly care. His warm demeanor and patience make him particularly suited to treating senior citizens with multiple comorbidities.",
+            "bookingDays": ["Wed", "Sat", "Sun"],
+            "bookingTimes": ["10:00 AM", "4:00 PM"]
         },
         {
             "id": "13",
@@ -102,7 +150,11 @@
             "type": "General physician",
             "isTopDoctor": true,
             "isAvailable": true,
-            "image": "./src/assets/assets_frontend/doc13.png"
+            "image": "./src/assets/assets_frontend/doc13.png",
+            "degrees": ["MBBS", "FCPS", "DM"],
+            "description": "An expert clinician and researcher, Dr. James balances patient care with medical innovation. He mentors young doctors and participates in public health studies.",
+            "bookingDays": ["Tue", "Thu", "Sun"],
+            "bookingTimes": ["8:30 AM", "6:30 PM"]
         },
         {
             "id": "14",
@@ -110,7 +162,11 @@
             "type": "General physician",
             "isTopDoctor": false,
             "isAvailable": false,
-            "image": "./src/assets/assets_frontend/doc14.png"
+            "image": "./src/assets/assets_frontend/doc14.png",
+            "degrees": ["MBBS"],
+            "description": "Dr. James is known for his excellent listening skills and holistic approach to health. His focus is on mental and physical well-being through personalized care.",
+            "bookingDays": ["Mon", "Wed"],
+            "bookingTimes": ["9:00 AM", "4:00 PM"]
         },
         {
             "id": "15",
@@ -118,7 +174,11 @@
             "type": "General physician",
             "isTopDoctor": true,
             "isAvailable": false,
-            "image": "./src/assets/assets_frontend/doc15.png"
+            "image": "./src/assets/assets_frontend/doc15.png",
+            "degrees": ["MBBS", "MD"],
+            "description": "With a strong presence in community health events, Dr. James is passionate about disease prevention and health literacy. His clinics are known for their friendly environment.",
+            "bookingDays": ["Fri", "Sat"],
+            "bookingTimes": ["8:00 AM", "5:00 PM"]
         }
     ]
 }
