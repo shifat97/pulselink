@@ -31,7 +31,7 @@ export default function RelatedDoctor({ id, type }) {
         };
 
         fetchRelatedDoctor();
-    }, [type]);
+    }, [id, type]);
 
     return (
         <section className="related-doctor mt-[184px]">
