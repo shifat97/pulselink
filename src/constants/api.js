@@ -9,9 +9,14 @@ const getDoctorByType = (type) => {
     return `http://localhost:3000/doctors?type=${type}`;
 };
 
+const getTopDoctorByType = (type) => {
+    return `http://localhost:3000/doctors?isTopDoctor=true&type=${type}`;
+};
+
 export {
     filterByTopDoctor,
     filterByNotTopDoctor,
     getDoctorById,
     getDoctorByType,
+    getTopDoctorByType,
 };

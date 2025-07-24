@@ -1,13 +1,15 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { filterByTopDoctor } from "../constants/api";
+import { filterByTopDoctor, getTopDoctorByType } from "../constants/api";
 import { ToastContainer, toast } from "../constants/toast";
 import Doctor from "../templates/Doctor";
+import { useType } from "../contexts/UseTypeContext";
 
 export default function TopDoctors() {
     const [seeMore, setSeeMore] = useState(false);
     const [topDoctors, setTopDoctors] = useState([]);
     const [displayDoctors, setDisplayDoctors] = useState([]);
+    const { selectedType } = useType();
 
     const handleSeeMoreButton = () => {
         setSeeMore(!seeMore);
@@ -22,10 +24,19 @@ export default function TopDoctors() {
     useEffect(() => {
         const fetchDoctors = async () => {
             try {
-                const response = await axios.get(filterByTopDoctor);
-                const data = response.data;
-                setTopDoctors(data);
-                setDisplayDoctors(data.slice(0, 10));
+                if (selectedType.toLowerCase() == "all") {
+                    const response = await axios.get(filterByTopDoctor);
+                    const data = response.data;
+                    setTopDoctors(data);
+                    setDisplayDoctors(data.slice(0, 10));
+                } else {
+                    const response = await axios.get(
+                        getTopDoctorByType(selectedType)
+                    );
+                    const data = response.data;
+                    setTopDoctors(data);
+                    setDisplayDoctors(data.slice(0, 10));
+                }
             } catch (e) {
                 toast(e.message ?? "Error while fetching data!", {
                     position: "top-right",
@@ -41,7 +52,7 @@ export default function TopDoctors() {
         };
 
         fetchDoctors();
-    }, []);
+    }, [selectedType]);
 
     return (
         <section className="mt-120">
