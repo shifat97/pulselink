@@ -51,7 +51,7 @@ export default function AllDoctors() {
                 <div className="flex lg:flex-col gap-2 flex-wrap">
                     <button
                         onClick={() => handleDoctorType("All")}
-                        className="block text-gray1 border-1 border-black/30 rounded-md px-4 py-2"
+                        className="block text-gray1 border-1 border-black/30 rounded-md px-4 py-2 hover:bg-purple3 cursor-pointer"
                     >
                         All
                     </button>
@@ -78,7 +78,7 @@ const GenerateDoctorCategory = ({ category, handleDoctorType }) => {
     return (
         <button
             onClick={() => handleDoctorType(category.name)}
-            className="block text-gray1 border-1 border-black/30 rounded-md px-4 py-2"
+            className="block text-gray1 border-1 border-black/30 rounded-md px-4 py-2 hover:bg-purple3 cursor-pointer"
         >
             {category.name}
         </button>
