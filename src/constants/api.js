@@ -1,3 +1,4 @@
+const allDoctors = "http://localhost:3000/doctors";
 const filterByTopDoctor = "http://localhost:3000/doctors?isTopDoctor=true";
 const filterByNotTopDoctor = "http://localhost:3000/doctors?isTopDoctor=false";
 
@@ -14,6 +15,7 @@ const getTopDoctorByType = (type) => {
 };
 
 export {
+    allDoctors,
     filterByTopDoctor,
     filterByNotTopDoctor,
     getDoctorById,
