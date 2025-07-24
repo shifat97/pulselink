@@ -51,7 +51,7 @@ export default function AboutDoctor() {
                                 />
                             </div>
                             <div>
-                                <div className="max-w-[1000px] h-[376px] border border-black/50 rounded-xl px-44 flex flex-col justify-center">
+                                <div className="h-[376px] border border-black/50 rounded-xl px-44 flex flex-col justify-center">
                                     <h2 className="flex items-center gap-4">
                                         <span className="text-30 lg:text-36 font-medium">
                                             {doctorData.name}
