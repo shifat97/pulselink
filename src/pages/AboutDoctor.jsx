@@ -51,7 +51,7 @@ export default function AboutDoctor() {
                                 />
                             </div>
                             <div>
-                                <div className="h-[376px] border border-black/50 rounded-xl px-44 flex flex-col justify-center">
+                                <div className="h-[376px] border border-black/50 rounded-xl px-6 lg:px-44 flex flex-col justify-center">
                                     <h2 className="flex items-center gap-4">
                                         <span className="text-30 lg:text-36 font-medium">
                                             {doctorData.name}
@@ -148,7 +148,7 @@ const GenerateBookingDay = ({ day }) => {
     return (
         <button
             onClick={() => setIsDaySelectedTrue(!isDaySelectedTrue)}
-            className={`rounded-full font-medium px-4 py-8 mt-5 ${
+            className={`rounded-full font-medium w-[87px] py-4 mt-5 ${
                 isDaySelectedTrue
                     ? "bg-primary text-white"
                     : "border border-gray1"
