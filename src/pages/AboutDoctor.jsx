@@ -5,6 +5,7 @@ import { ToastContainer, toast } from "../constants/toast";
 import { getDoctorById } from "../constants/api";
 import { getImageSrc } from "../constants/imagePath";
 import { verifiedIcon, infoIcon } from "../constants/icons";
+import RelatedDoctor from "../components/RelatedDoctor";
 
 export default function AboutDoctor() {
     const { doctorID } = useParams();
@@ -126,6 +127,12 @@ export default function AboutDoctor() {
                                 </button>
                             </div>
                         </div>
+                        <section>
+                            <RelatedDoctor
+                                id={doctorData.id}
+                                type={doctorData.type}
+                            />
+                        </section>
                     </div>
                 ) : (
                     <p>Loading doctor info...</p>

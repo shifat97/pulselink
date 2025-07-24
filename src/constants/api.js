@@ -5,4 +5,13 @@ const getDoctorById = (id) => {
     return `http://localhost:3000/doctors?id=${id}`;
 };
 
-export { filterByTopDoctor, filterByNotTopDoctor, getDoctorById };
+const getDoctorByType = (type) => {
+    return `http://localhost:3000/doctors?type=${type}`;
+};
+
+export {
+    filterByTopDoctor,
+    filterByNotTopDoctor,
+    getDoctorById,
+    getDoctorByType,
+};
