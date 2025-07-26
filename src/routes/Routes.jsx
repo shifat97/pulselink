@@ -3,6 +3,7 @@ import App from "../App";
 import Home from "../pages/Home";
 import AboutDoctor from "../pages/AboutDoctor";
 import AllDoctors from "../pages/AllDoctors";
+import About from "../pages/About";
 
 export default function AppRoutes() {
     return (
@@ -14,6 +15,7 @@ export default function AppRoutes() {
                     path="/doctors/:doctorID"
                     element={<AboutDoctor />}
                 ></Route>
+                <Route path="about" element={<About />} />
             </Route>
         </Routes>
     );
