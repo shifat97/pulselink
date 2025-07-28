@@ -4,6 +4,7 @@ import Home from "../pages/Home";
 import AboutDoctor from "../pages/AboutDoctor";
 import AllDoctors from "../pages/AllDoctors";
 import About from "../pages/About";
+import Contact from "../pages/Contact";
 
 export default function AppRoutes() {
     return (
@@ -16,6 +17,7 @@ export default function AppRoutes() {
                     element={<AboutDoctor />}
                 ></Route>
                 <Route path="about" element={<About />} />
+                <Route path="contact" element={<Contact />} />
             </Route>
         </Routes>
     );
