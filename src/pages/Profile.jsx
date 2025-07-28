@@ -14,7 +14,7 @@ export default function Profile() {
             </div>
             <div className="mt-5">
                 <h1 className="text-3xl font-medium">Edward Vincent</h1>
-                <div className="h-[1px] w-full bg-black/20 mt-2"></div>
+                <div className="h-[1px] w-full bg-black/20 mt-2 md:w-[645px]"></div>
                 <div>
                     <p className="text-black/30 text-16 mt-6 underline">
                         CONTACT INFORMATION

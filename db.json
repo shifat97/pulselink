@@ -11,6 +11,10 @@
             "description": "Dr. Ayesha Rahman is a highly experienced dermatologist with over a decade of dedicated service in skin care. She specializes in treating common and chronic skin conditions and is known for her compassionate, patient-first approach.",
             "yearsOfExperience": 12,
             "appointmentFee": 1200,
+            "address": {
+                "street": "57th Cross, Richmond",
+                "area": "Circle, Church Road, London"
+            },
             "bookingDays": ["Sat", "Sun", "Wed"],
             "bookingTimes": ["8:00 AM", "5:00 PM"]
         },
@@ -25,6 +29,10 @@
             "description": "Dr. Sameer Chowdhury provides holistic pediatric care with a focus on preventive medicine and long-term wellness. His approachable nature makes him a favorite among children and their parents.",
             "yearsOfExperience": 8,
             "appointmentFee": 1000,
+            "address": {
+                "street": "57th Cross, Richmond",
+                "area": "Circle, Church Road, London"
+            },
             "bookingDays": ["Mon", "Thu"],
             "bookingTimes": ["9:00 AM", "3:00 PM"]
         },
@@ -39,6 +47,10 @@
             "description": "With a strong academic foundation and years of clinical practice, Dr. Nusrat Hossain excels in diagnosing complex gynecological conditions and managing women’s health across all ages.",
             "yearsOfExperience": 10,
             "appointmentFee": 1100,
+            "address": {
+                "street": "57th Cross, Richmond",
+                "area": "Circle, Church Road, London"
+            },
             "bookingDays": ["Sun", "Wed", "Fri"],
             "bookingTimes": ["10:00 AM", "6:00 PM"]
         },
@@ -53,6 +65,10 @@
             "description": "Dr. Imran Ali blends modern clinical practices with deep empathy, ensuring his patients receive not just treatment but comprehensive care and education about their health conditions.",
             "yearsOfExperience": 15,
             "appointmentFee": 900,
+            "address": {
+                "street": "57th Cross, Richmond",
+                "area": "Circle, Church Road, London"
+            },
             "bookingDays": ["Tue", "Thu", "Sat"],
             "bookingTimes": ["8:30 AM", "4:30 PM"]
         },
@@ -67,6 +83,10 @@
             "description": "A young and passionate neurologist, Dr. Farzana Ahmed is committed to improving community health. Her areas of interest include migraines, epilepsy, and neurodevelopmental disorders.",
             "yearsOfExperience": 6,
             "appointmentFee": 950,
+            "address": {
+                "street": "57th Cross, Richmond",
+                "area": "Circle, Church Road, London"
+            },
             "bookingDays": ["Wed", "Sat"],
             "bookingTimes": ["7:00 AM", "2:00 PM"]
         },
@@ -81,6 +101,10 @@
             "description": "With years of experience in both urban and rural healthcare facilities, Dr. Hasan Mahmud is adept at handling a wide range of digestive issues and believes in building strong doctor-patient relationships.",
             "yearsOfExperience": 13,
             "appointmentFee": 1050,
+            "address": {
+                "street": "57th Cross, Richmond",
+                "area": "Circle, Church Road, London"
+            },
             "bookingDays": ["Sun", "Tue"],
             "bookingTimes": ["11:00 AM", "6:00 PM"]
         },
@@ -95,6 +119,10 @@
             "description": "Dr. Tasnim Jahan brings clinical accuracy to her consultations, with expertise in diagnostic medicine. She often collaborates with lab specialists to provide detailed treatment insights.",
             "yearsOfExperience": 9,
             "appointmentFee": 1150,
+            "address": {
+                "street": "57th Cross, Richmond",
+                "area": "Circle, Church Road, London"
+            },
             "bookingDays": ["Thu", "Fri"],
             "bookingTimes": ["10:30 AM", "5:30 PM"]
         },
@@ -109,6 +137,10 @@
             "description": "Known for his energy and friendly manner, Dr. Rafid Karim offers modern, evidence-based treatment approaches. He regularly engages in child health awareness programs.",
             "yearsOfExperience": 7,
             "appointmentFee": 1000,
+            "address": {
+                "street": "57th Cross, Richmond",
+                "area": "Circle, Church Road, London"
+            },
             "bookingDays": ["Mon", "Wed"],
             "bookingTimes": ["9:30 AM", "3:30 PM"]
         },
@@ -123,6 +155,10 @@
             "description": "Dr. Mahfuz Rahim is well-versed in managing lifestyle-related neurological disorders and promotes a preventive approach to long-term brain health.",
             "yearsOfExperience": 11,
             "appointmentFee": 950,
+            "address": {
+                "street": "57th Cross, Richmond",
+                "area": "Circle, Church Road, London"
+            },
             "bookingDays": ["Tue", "Fri", "Sat"],
             "bookingTimes": ["8:00 AM", "6:00 PM"]
         },
@@ -137,6 +173,10 @@
             "description": "Respected for her diagnostic precision and patient care philosophy, Dr. Lamiya Sultana ensures her patients are fully informed and involved in every skin-related treatment decision.",
             "yearsOfExperience": 14,
             "appointmentFee": 1200,
+            "address": {
+                "street": "57th Cross, Richmond",
+                "area": "Circle, Church Road, London"
+            },
             "bookingDays": ["Sun", "Thu"],
             "bookingTimes": ["7:30 AM", "1:00 PM"]
         },
@@ -151,6 +191,10 @@
             "description": "Dr. Nabil Zaman combines scientific rigor with clear communication, making him a reliable physician for both acute and chronic digestive issues in all age groups.",
             "yearsOfExperience": 10,
             "appointmentFee": 1050,
+            "address": {
+                "street": "57th Cross, Richmond",
+                "area": "Circle, Church Road, London"
+            },
             "bookingDays": ["Mon", "Fri"],
             "bookingTimes": ["9:00 AM", "5:00 PM"]
         },
@@ -165,6 +209,10 @@
             "description": "Dr. Rida Tabassum is a compassionate doctor dedicated to elderly care. Her warm demeanor and patience make her particularly suited to treating senior citizens with multiple comorbidities.",
             "yearsOfExperience": 8,
             "appointmentFee": 900,
+            "address": {
+                "street": "57th Cross, Richmond",
+                "area": "Circle, Church Road, London"
+            },
             "bookingDays": ["Wed", "Sat", "Sun"],
             "bookingTimes": ["10:00 AM", "4:00 PM"]
         },
@@ -179,6 +227,10 @@
             "description": "An expert neurologist and researcher, Dr. Azfar Siddiqui balances patient care with medical innovation. He mentors young doctors and participates in public health studies.",
             "yearsOfExperience": 16,
             "appointmentFee": 1100,
+            "address": {
+                "street": "57th Cross, Richmond",
+                "area": "Circle, Church Road, London"
+            },
             "bookingDays": ["Tue", "Thu", "Sun"],
             "bookingTimes": ["8:30 AM", "6:30 PM"]
         },
@@ -193,6 +245,10 @@
             "description": "Dr. Tania Ferdous is known for her excellent listening skills and holistic approach to women’s health. Her focus is on mental and physical well-being through personalized care.",
             "yearsOfExperience": 7,
             "appointmentFee": 950,
+            "address": {
+                "street": "57th Cross, Richmond",
+                "area": "Circle, Church Road, London"
+            },
             "bookingDays": ["Mon", "Wed"],
             "bookingTimes": ["9:00 AM", "4:00 PM"]
         },
@@ -207,6 +263,10 @@
             "description": "With a strong presence in community child health events, Dr. Zayed Hassan is passionate about disease prevention and health literacy. His clinics are known for their friendly environment.",
             "yearsOfExperience": 9,
             "appointmentFee": 1000,
+            "address": {
+                "street": "57th Cross, Richmond",
+                "area": "Circle, Church Road, London"
+            },
             "bookingDays": ["Fri", "Sat"],
             "bookingTimes": ["8:00 AM", "5:00 PM"]
         }

@@ -6,6 +6,7 @@ import AllDoctors from "../pages/AllDoctors";
 import About from "../pages/About";
 import Contact from "../pages/Contact";
 import Profile from "../pages/Profile";
+import MyAppointment from "../pages/MyAppointments";
 
 export default function AppRoutes() {
     return (
@@ -20,6 +21,7 @@ export default function AppRoutes() {
                 <Route path="about" element={<About />} />
                 <Route path="contact" element={<Contact />} />
                 <Route path="profile" element={<Profile />} />
+                <Route path="my-appointment" element={<MyAppointment />} />
             </Route>
         </Routes>
     );
