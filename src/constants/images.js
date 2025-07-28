@@ -4,6 +4,8 @@ import heroImage from "../assets/assets_frontend/header_img.png";
 import appointmentImage from "../assets/assets_frontend/appointment_img.png";
 import aboutImage from "../assets/assets_frontend/about_image.png";
 import contactImage from "../assets/assets_frontend/contact_image.png";
+import profileImage from "../assets/assets_frontend/profile_pic.png";
+import uploadArea from "../assets/assets_frontend/upload_area.png";
 
 export {
     logo,
@@ -12,4 +14,6 @@ export {
     appointmentImage,
     aboutImage,
     contactImage,
+    profileImage,
+    uploadArea,
 };
