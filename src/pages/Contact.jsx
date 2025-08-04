@@ -15,7 +15,7 @@ export default function Contact() {
             <h1 className="mt-20 text-gray1 text-center text-3xl uppercase">
                 Contact <span className="text-black1 font-semibold">us</span>
             </h1>
-            <div className="flex flex-col gap-6 lg:flex-row items-center mt-[88px]">
+            <div className="flex flex-col gap-6 lg:flex-row items-center justify-center mt-[88px]">
                 <div>
                     <img
                         className="md:max-w-[560px] mx-auto"
