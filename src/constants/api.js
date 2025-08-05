@@ -14,6 +14,10 @@ const getTopDoctorByType = (type) => {
     return `http://localhost:3000/doctors?isTopDoctor=true&type=${type}`;
 };
 
+const setRegisteredUser = () => {
+    return "http://localhost:3000/users";
+};
+
 export {
     allDoctors,
     filterByTopDoctor,
@@ -21,4 +25,5 @@ export {
     getDoctorById,
     getDoctorByType,
     getTopDoctorByType,
+    setRegisteredUser,
 };
