@@ -8,6 +8,7 @@ import Contact from "../pages/Contact";
 import Profile from "../pages/Profile";
 import MyAppointment from "../pages/MyAppointments";
 import Registration from "../pages/Registration";
+import Login from "../pages/Login";
 
 export default function AppRoutes() {
     return (
@@ -24,6 +25,7 @@ export default function AppRoutes() {
                 <Route path="profile" element={<Profile />} />
                 <Route path="my-appointment" element={<MyAppointment />} />
                 <Route path="registration" element={<Registration />} />
+                <Route path="login" element={<Login />} />
             </Route>
         </Routes>
     );
