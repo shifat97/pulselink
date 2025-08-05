@@ -10,39 +10,35 @@ const Registration = () => {
     const [password, setPassword] = useState("");
     const navigate = useNavigate();
 
-    const handleRegistrationForm = (e) => {
+    const handleRegistrationForm = async (e) => {
         e.preventDefault();
 
-        const sendRegisterDataToDB = async () => {
-            try {
-                const response = await axios.post(setRegisteredUser(), {
-                    fullName,
-                    email,
-                    password,
-                });
+        try {
+            const response = await axios.post(setRegisteredUser(), {
+                fullName,
+                email,
+                password,
+            });
 
-                // Check if registration was successful
-                if (response.status === 200 || response.status === 201) {
-                    setFullName("");
-                    setEmail("");
-                    setPassword("");
-                    navigate("/login");
-                }
-            } catch (e) {
-                toast(e.message ?? "Something went wrong! Try again", {
-                    position: "top-right",
-                    autoClose: 5000,
-                    hideProgressBar: false,
-                    closeOnClick: false,
-                    pauseOnHover: true,
-                    draggable: true,
-                    progress: undefined,
-                    theme: "light",
-                });
+            // Check if registration was successful
+            if (response.status === 200 || response.status === 201) {
+                setFullName("");
+                setEmail("");
+                setPassword("");
+                navigate("/login");
             }
-        };
-
-        sendRegisterDataToDB();
+        } catch (e) {
+            toast(e.message ?? "Something went wrong! Try again", {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: false,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+            });
+        }
     };
 
     return (
