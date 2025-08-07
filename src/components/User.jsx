@@ -1,11 +1,18 @@
-import { NavLink } from "react-router";
+import { Link, NavLink } from "react-router";
 import { useAuthType } from "../contexts/UseTypeContext";
 import { getImageSrc } from "../constants/imagePath";
 import { profilePicture } from "../constants/images";
 import { dropDownIcon } from "../constants/icons";
+import { useState } from "react";
 
 export default function User() {
-    const { isLogin } = useAuthType();
+    const { isLogin, changeUserLogout } = useAuthType();
+    const [toggleMenu, setToggleMenu] = useState(false);
+
+    const handleUserLogout = () => {
+        changeUserLogout();
+        localStorage.removeItem("auth");
+    };
 
     return (
         <section>
@@ -16,16 +23,36 @@ export default function User() {
                     </button>
                 </NavLink>
             ) : (
-                <div className="flex gap-4 items-center">
-                    <img
-                        width={49}
-                        height={49}
-                        className="rounded-full"
-                        src={getImageSrc(profilePicture)}
-                        alt=""
-                    />
-                    <img src={dropDownIcon} alt="" />
-                </div>
+                <button onClick={() => setToggleMenu(!toggleMenu)}>
+                    <div className="relative">
+                        <div className="flex gap-4 items-center">
+                            <img
+                                width={49}
+                                height={49}
+                                className="rounded-full"
+                                src={getImageSrc(profilePicture)}
+                                alt=""
+                            />
+                            <img src={dropDownIcon} alt="" />
+                        </div>
+                        <div
+                            className={`absolute right-0 mt-8 bg-[#F8F8F8] p-4 rounded-md w-[218px] flex flex-col items-start gap-2 ${
+                                toggleMenu ? "block" : "hidden"
+                            }`}
+                        >
+                            <Link to="/profile">
+                                <p>My Profile</p>
+                            </Link>
+                            <Link to="/my-appointment">
+                                <p>My Appointments</p>
+                            </Link>
+
+                            <button onClick={handleUserLogout}>
+                                <p>Logout</p>
+                            </button>
+                        </div>
+                    </div>
+                </button>
             )}
         </section>
     );
