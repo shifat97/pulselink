@@ -8,6 +8,7 @@ import neurologist from "../assets/assets_frontend/Neurologist.svg";
 import gastroenterologist from "../assets/assets_frontend/Gastroenterologist.svg";
 import verifiedIcon from "../assets/assets_frontend/verified_icon.svg";
 import infoIcon from "../assets/assets_frontend/info_icon.svg";
+import dropDownIcon from "../assets/assets_frontend/dropdown_icon.svg";
 
 export {
     menu,
@@ -20,4 +21,5 @@ export {
     gastroenterologist,
     verifiedIcon,
     infoIcon,
+    dropDownIcon,
 };

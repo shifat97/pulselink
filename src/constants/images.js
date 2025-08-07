@@ -6,6 +6,7 @@ import aboutImage from "../assets/assets_frontend/about_image.png";
 import contactImage from "../assets/assets_frontend/contact_image.png";
 import profileImage from "../assets/assets_frontend/profile_pic.png";
 import uploadArea from "../assets/assets_frontend/upload_area.png";
+import profilePicture from "../assets/assets_frontend/profile_pic.png";
 
 export {
     logo,
@@ -16,4 +17,5 @@ export {
     contactImage,
     profileImage,
     uploadArea,
+    profilePicture,
 };
