@@ -25,7 +25,11 @@ const Login = () => {
                 if (getUser) {
                     changeUserLogin();
                     setLoggedInUser(getUser);
-                    localStorage.setItem("auth", JSON.stringify(getUser.id));
+                    const auth = {
+                        ...getUser,
+                        status: true,
+                    };
+                    localStorage.setItem("auth", JSON.stringify(auth));
                     navigate("/");
                 } else {
                     toast("Invalid email or password");

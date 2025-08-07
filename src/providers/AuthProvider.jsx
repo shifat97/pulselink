@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AuthContext } from "../contexts/AuthContext";
 
 export const AuthProvider = ({ children }) => {
@@ -12,6 +12,14 @@ export const AuthProvider = ({ children }) => {
     const changeUserLogout = () => {
         setIsLogin(false);
     };
+
+    useEffect(() => {
+        const getLoginStateFromLS = JSON.parse(localStorage.getItem("auth"));
+
+        if (getLoginStateFromLS && getLoginStateFromLS.status) {
+            setIsLogin(true);
+        }
+    }, []);
 
     return (
         <AuthContext.Provider
