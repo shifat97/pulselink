@@ -1,12 +1,67 @@
+import { useState } from "react";
 import { profileImage, uploadArea } from "../constants/images";
 import { useAuthType } from "../contexts/UseTypeContext";
+import axios from "axios";
+import { updateUserInformation } from "../constants/api";
+import { toast, ToastContainer } from "../constants/toast";
 
 export default function Profile() {
+    const [isEdit, setIsEdit] = useState(false);
+    const [updatePhone, setUpdatePhone] = useState("Not given");
+    const [updateStreet, setUpdateStreet] = useState("Not given");
+    const [updateCity, setUpdateCity] = useState("Not given");
+    const [updateCountry, setUpdateCountry] = useState("Not given");
+    const [updateGender, setUpdateGender] = useState("Not given");
+    const [updateBirthDate, setUpdateBirthDate] = useState("Not given");
+
     const { loggedInUser } = useAuthType();
-    const { fullName, email, phone, address, gender, birth_date } =
+    const { id, fullName, email, phone, address, gender, birth_date } =
         loggedInUser;
+
+    const handleSaveInformation = async () => {
+        try {
+            await axios.patch(updateUserInformation(id), {
+                id: id,
+                fullName: fullName,
+                email: email,
+                phone: updatePhone,
+                address: {
+                    street: updateStreet,
+                    city: updateCity,
+                    country: updateCountry,
+                },
+                gender: updateGender,
+                birth_date: updateBirthDate,
+            });
+
+            toast("Update Successful");
+            const getLSData = JSON.parse(localStorage.getItem("auth"));
+
+            localStorage.setItem(
+                "auth",
+                JSON.stringify({
+                    status: true,
+                    user: {
+                        ...getLSData.user,
+                        phone: updatePhone,
+                        address: {
+                            street: updateStreet,
+                            city: updateCity,
+                            country: updateCountry,
+                        },
+                        gender: updateGender,
+                        birth_date: updateBirthDate,
+                    },
+                })
+            );
+        } catch (e) {
+            toast(e.message ?? "Update failed. Try again!");
+        }
+    };
+
     return (
         <section className="profile">
+            <ToastContainer />
             <div className="flex items-center gap-4 mt-[50px]">
                 <img
                     width={150}
@@ -26,26 +81,87 @@ export default function Profile() {
                     <table className="mt-5">
                         <tbody className="text-gray1">
                             <tr>
-                                <td className="pt-2">Email:</td>
-                                <td className="pl-[72px] text-blue1">
+                                <td>Email:</td>
+                                <td className="text-blue1 pl-[72px]">
                                     {email}
                                 </td>
                             </tr>
                             <tr>
-                                <td className="pt-2">Phone:</td>
-                                <td className="pl-[72px] text-blue1">
-                                    {phone}
-                                </td>
+                                <td>Phone:</td>
+                                {isEdit ? (
+                                    <td>
+                                        <input
+                                            className="ml-[72px] border-b-1 focus:outline-none focus:ring-0"
+                                            type="text"
+                                            name="phone"
+                                            id="phone"
+                                            placeholder={phone}
+                                            onChange={(e) =>
+                                                setUpdatePhone(e.target.value)
+                                            }
+                                        />
+                                    </td>
+                                ) : (
+                                    <td className="text-blue1 pl-[72px]">
+                                        {phone}
+                                    </td>
+                                )}
                             </tr>
                             <tr>
-                                <td className="pt-2">Address:</td>
-                                <td className="pl-[72px]">
-                                    <span className="block">
-                                        {address.street}
-                                    </span>
-                                    <span>
-                                        {address.city + " " + address.country}
-                                    </span>
+                                <td>Address:</td>
+                                <td className={`${isEdit ? "" : "pl-[72px]"}`}>
+                                    {isEdit ? (
+                                        <>
+                                            <input
+                                                className="ml-[72px] border-b-1 focus:outline-none focus:ring-0"
+                                                type="text"
+                                                name="street"
+                                                id="street"
+                                                placeholder={address.street}
+                                                onChange={(e) =>
+                                                    setUpdateStreet(
+                                                        e.target.value
+                                                    )
+                                                }
+                                            />
+                                            <input
+                                                className="ml-[72px] border-b-1 focus:outline-none focus:ring-0"
+                                                type="text"
+                                                name="city"
+                                                id="city"
+                                                placeholder={address.city}
+                                                onChange={(e) =>
+                                                    setUpdateCity(
+                                                        e.target.value
+                                                    )
+                                                }
+                                            />
+                                            <input
+                                                className="ml-[72px] border-b-1 focus:outline-none focus:ring-0"
+                                                type="text"
+                                                name="country"
+                                                id="country"
+                                                placeholder={address.country}
+                                                onChange={(e) =>
+                                                    setUpdateCountry(
+                                                        e.target.value
+                                                    )
+                                                }
+                                            />
+                                        </>
+                                    ) : (
+                                        <>
+                                            <span className="block">
+                                                {address.street}
+                                            </span>
+
+                                            <span>
+                                                {address.city +
+                                                    " " +
+                                                    address.country}
+                                            </span>
+                                        </>
+                                    )}
                                 </td>
                             </tr>
                         </tbody>
@@ -56,24 +172,63 @@ export default function Profile() {
                     <table className="mt-5">
                         <tbody className="text-gray1">
                             <tr>
-                                <td className="pt-2">Gender:</td>
-                                <td className="pl-[72px]">{gender}</td>
+                                <td>Gender:</td>
+                                {isEdit ? (
+                                    <td>
+                                        <input
+                                            className="ml-[72px] border-b-1 focus:outline-none focus:ring-0"
+                                            type="text"
+                                            name="gender"
+                                            id="gender"
+                                            placeholder={gender}
+                                            onChange={(e) =>
+                                                setUpdateGender(e.target.value)
+                                            }
+                                        />
+                                    </td>
+                                ) : (
+                                    <td className="pl-[72px]">{gender}</td>
+                                )}
                             </tr>
                             <tr>
-                                <td className="pt-2">Birthday:</td>
-                                <td className="pl-[72px]">{birth_date}</td>
+                                <td>Birthday:</td>
+                                {isEdit ? (
+                                    <td>
+                                        <input
+                                            className="ml-[72px] focus:outline-none focus:ring-0"
+                                            type="date"
+                                            name="birth_date"
+                                            id="birth_date"
+                                            onChange={(e) =>
+                                                setUpdateBirthDate(
+                                                    e.target.value
+                                                )
+                                            }
+                                        />
+                                    </td>
+                                ) : (
+                                    <td className="pl-[72px]">{birth_date}</td>
+                                )}
                             </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
             <div className="mt-60 flex gap-2">
-                <button className="border border-purple-700 rounded-full px-[40px] py-4 hover:bg-pm-hover hover:text-white cursor-pointer">
-                    Edit
+                <button
+                    onClick={() => setIsEdit(!isEdit)}
+                    className="border border-purple-700 rounded-full px-[40px] py-4 hover:bg-pm-hover hover:text-white cursor-pointer"
+                >
+                    {isEdit ? "Close" : "Edit"}
                 </button>
-                <button className="border border-purple-700 rounded-full px-[40px] py-4 hover:bg-pm-hover hover:text-white cursor-pointer">
-                    Save Information
-                </button>
+                <form onSubmit={handleSaveInformation}>
+                    <button
+                        type="submit"
+                        className="border border-purple-700 rounded-full px-[40px] py-4 hover:bg-pm-hover hover:text-white cursor-pointer"
+                    >
+                        Save Information
+                    </button>
+                </form>
             </div>
         </section>
     );

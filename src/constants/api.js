@@ -18,6 +18,10 @@ const setRegisteredUser = () => {
     return "http://localhost:3000/users";
 };
 
+const updateUserInformation = (id) => {
+    return `http://localhost:3000/users/${id}`;
+};
+
 export {
     allDoctors,
     filterByTopDoctor,
@@ -26,4 +30,5 @@ export {
     getDoctorByType,
     getTopDoctorByType,
     setRegisteredUser,
+    updateUserInformation,
 };
