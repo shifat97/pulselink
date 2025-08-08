@@ -1,6 +1,10 @@
 import { profileImage, uploadArea } from "../constants/images";
+import { useAuthType } from "../contexts/UseTypeContext";
 
 export default function Profile() {
+    const { loggedInUser } = useAuthType();
+    const { fullName, email, phone, address, gender, birth_date } =
+        loggedInUser;
     return (
         <section className="profile">
             <div className="flex items-center gap-4 mt-[50px]">
@@ -13,7 +17,7 @@ export default function Profile() {
                 <img width={150} src={uploadArea} alt="" />
             </div>
             <div className="mt-5">
-                <h1 className="text-3xl font-medium">Edward Vincent</h1>
+                <h1 className="text-3xl font-medium">{fullName}</h1>
                 <div className="h-[1px] w-full bg-black/20 mt-2 md:w-[645px]"></div>
                 <div>
                     <p className="text-black/30 text-16 mt-6 underline">
@@ -24,22 +28,24 @@ export default function Profile() {
                             <tr>
                                 <td className="pt-2">Email:</td>
                                 <td className="pl-[72px] text-blue1">
-                                    richardjameswap@gmail.com
+                                    {email}
                                 </td>
                             </tr>
                             <tr>
                                 <td className="pt-2">Phone:</td>
                                 <td className="pl-[72px] text-blue1">
-                                    +1 123 456 7890
+                                    {phone}
                                 </td>
                             </tr>
                             <tr>
                                 <td className="pt-2">Address:</td>
                                 <td className="pl-[72px]">
                                     <span className="block">
-                                        57th Cross, Richmond
+                                        {address.street}
                                     </span>
-                                    <span>Circle, Church Road, London</span>
+                                    <span>
+                                        {address.city + " " + address.country}
+                                    </span>
                                 </td>
                             </tr>
                         </tbody>
@@ -51,11 +57,11 @@ export default function Profile() {
                         <tbody className="text-gray1">
                             <tr>
                                 <td className="pt-2">Gender:</td>
-                                <td className="pl-[72px]">Male</td>
+                                <td className="pl-[72px]">{gender}</td>
                             </tr>
                             <tr>
                                 <td className="pt-2">Birthday:</td>
-                                <td className="pl-[72px]">20 July, 2024</td>
+                                <td className="pl-[72px]">{birth_date}</td>
                             </tr>
                         </tbody>
                     </table>

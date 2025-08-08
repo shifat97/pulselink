@@ -277,28 +277,60 @@
             "fullName": "Md. Shifat Bin Reza",
             "email": "shifatbinreza2@gmail.com",
             "password": "12345",
-            "imageUrl": null
+            "imageUrl": null,
+            "phone": "---",
+            "address": {
+                "street": "-",
+                "city": "-",
+                "country": "-"
+            },
+            "gender": "---",
+            "birth_date": "---"
         },
         {
             "id": "4171",
             "fullName": "Rifat Bin Reza",
             "email": "rifat@gmail.com",
             "password": "asdfg",
-            "imageUrl": null
+            "imageUrl": null,
+            "phone": "---",
+            "address": {
+                "street": "-",
+                "city": "-",
+                "country": "-"
+            },
+            "gender": "---",
+            "birth_date": "---"
         },
         {
             "id": "1cdf",
             "fullName": "Rezaul Karim",
             "email": "rezaul@email.com",
             "password": "qwert",
-            "imageUrl": null
+            "imageUrl": null,
+            "phone": "---",
+            "address": {
+                "street": "-",
+                "city": "-",
+                "country": "-"
+            },
+            "gender": "---",
+            "birth_date": "---"
         },
         {
             "id": "4603",
             "fullName": "Rina Akter",
             "email": "rina@email.com",
             "password": "zxcvb",
-            "imageUrl": null
+            "imageUrl": null,
+            "phone": "---",
+            "address": {
+                "street": "-",
+                "city": "-",
+                "country": "-"
+            },
+            "gender": "---",
+            "birth_date": "---"
         }
     ]
 }

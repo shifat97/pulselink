@@ -4,6 +4,7 @@ import { AuthContext } from "../contexts/AuthContext";
 export const AuthProvider = ({ children }) => {
     const [isLogin, setIsLogin] = useState(false);
     const [loggedInUser, setLoggedInUser] = useState(null);
+    const [loading, setLoading] = useState(true);
 
     // Login: set state and localStorage
     const changeUserLogin = (user) => {
@@ -26,6 +27,7 @@ export const AuthProvider = ({ children }) => {
             setIsLogin(true);
             setLoggedInUser(getLoginStateFromLS.user);
         }
+        setLoading(false);
     }, []);
 
     return (
@@ -35,6 +37,7 @@ export const AuthProvider = ({ children }) => {
                 changeUserLogin,
                 changeUserLogout,
                 loggedInUser,
+                loading,
             }}
         >
             {children}
