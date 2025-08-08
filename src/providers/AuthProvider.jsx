@@ -5,19 +5,26 @@ export const AuthProvider = ({ children }) => {
     const [isLogin, setIsLogin] = useState(false);
     const [loggedInUser, setLoggedInUser] = useState(null);
 
-    const changeUserLogin = () => {
+    // Login: set state and localStorage
+    const changeUserLogin = (user) => {
         setIsLogin(true);
+        setLoggedInUser(user);
+        localStorage.setItem("auth", JSON.stringify({ status: true, user }));
     };
 
+    // Logout: clear state and localStorage
     const changeUserLogout = () => {
         setIsLogin(false);
+        setLoggedInUser(null);
+        localStorage.removeItem("auth");
     };
 
+    // On mount, restore state from localStorage
     useEffect(() => {
         const getLoginStateFromLS = JSON.parse(localStorage.getItem("auth"));
-
         if (getLoginStateFromLS && getLoginStateFromLS.status) {
             setIsLogin(true);
+            setLoggedInUser(getLoginStateFromLS.user);
         }
     }, []);
 
@@ -28,7 +35,6 @@ export const AuthProvider = ({ children }) => {
                 changeUserLogin,
                 changeUserLogout,
                 loggedInUser,
-                setLoggedInUser,
             }}
         >
             {children}

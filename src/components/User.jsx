@@ -11,7 +11,6 @@ export default function User() {
 
     const handleUserLogout = () => {
         changeUserLogout();
-        localStorage.removeItem("auth");
     };
 
     return (
@@ -23,36 +22,37 @@ export default function User() {
                     </button>
                 </NavLink>
             ) : (
-                <button onClick={() => setToggleMenu(!toggleMenu)}>
-                    <div className="relative">
-                        <div className="flex gap-4 items-center">
-                            <img
-                                width={49}
-                                height={49}
-                                className="rounded-full"
-                                src={getImageSrc(profilePicture)}
-                                alt=""
-                            />
-                            <img src={dropDownIcon} alt="" />
-                        </div>
-                        <div
-                            className={`absolute right-0 mt-8 bg-[#F8F8F8] p-4 rounded-md w-[218px] flex flex-col items-start gap-2 ${
-                                toggleMenu ? "block" : "hidden"
-                            }`}
-                        >
-                            <Link to="/profile">
-                                <p>My Profile</p>
-                            </Link>
-                            <Link to="/my-appointment">
-                                <p>My Appointments</p>
-                            </Link>
-
-                            <button onClick={handleUserLogout}>
-                                <p>Logout</p>
-                            </button>
-                        </div>
+                <div
+                    className="relative"
+                    onClick={() => setToggleMenu(!toggleMenu)}
+                >
+                    <div className="flex gap-4 items-center">
+                        <img
+                            width={49}
+                            height={49}
+                            className="rounded-full"
+                            src={getImageSrc(profilePicture)}
+                            alt=""
+                        />
+                        <img src={dropDownIcon} alt="" />
                     </div>
-                </button>
+                    <div
+                        className={`absolute right-0 mt-8 bg-[#F8F8F8] p-4 rounded-md w-[218px] flex flex-col items-start gap-2 ${
+                            toggleMenu ? "block" : "hidden"
+                        }`}
+                    >
+                        <Link to="/profile">
+                            <p>My Profile</p>
+                        </Link>
+                        <Link to="/my-appointment">
+                            <p>My Appointments</p>
+                        </Link>
+
+                        <button onClick={handleUserLogout}>
+                            <p>Logout</p>
+                        </button>
+                    </div>
+                </div>
             )}
         </section>
     );

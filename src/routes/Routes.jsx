@@ -9,6 +9,7 @@ import Profile from "../pages/Profile";
 import MyAppointment from "../pages/MyAppointments";
 import Registration from "../pages/Registration";
 import Login from "../pages/Login";
+import ProtectedRoute from "./ProtectedRoute";
 
 export default function AppRoutes() {
     return (
@@ -22,10 +23,24 @@ export default function AppRoutes() {
                 ></Route>
                 <Route path="about" element={<About />} />
                 <Route path="contact" element={<Contact />} />
-                <Route path="profile" element={<Profile />} />
-                <Route path="my-appointment" element={<MyAppointment />} />
                 <Route path="registration" element={<Registration />} />
                 <Route path="login" element={<Login />} />
+                <Route
+                    path="profile"
+                    element={
+                        <ProtectedRoute>
+                            <Profile />
+                        </ProtectedRoute>
+                    }
+                />
+                <Route
+                    path="my-appointment"
+                    element={
+                        <ProtectedRoute>
+                            <MyAppointment />
+                        </ProtectedRoute>
+                    }
+                />
             </Route>
         </Routes>
     );

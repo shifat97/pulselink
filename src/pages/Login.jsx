@@ -8,7 +8,7 @@ import { useAuthType } from "../contexts/UseTypeContext";
 const Login = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const { changeUserLogin, setLoggedInUser } = useAuthType();
+    const { changeUserLogin } = useAuthType();
     const navigate = useNavigate();
 
     const handleLoginButton = async (e) => {
@@ -23,13 +23,7 @@ const Login = () => {
                 );
 
                 if (getUser) {
-                    changeUserLogin();
-                    setLoggedInUser(getUser);
-                    const auth = {
-                        ...getUser,
-                        status: true,
-                    };
-                    localStorage.setItem("auth", JSON.stringify(auth));
+                    changeUserLogin(getUser);
                     navigate("/");
                 } else {
                     toast("Invalid email or password");
