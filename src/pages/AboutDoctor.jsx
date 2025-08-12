@@ -1,15 +1,21 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router";
+import { useNavigate, useParams } from "react-router";
 import { ToastContainer, toast } from "../constants/toast";
-import { getDoctorById } from "../constants/api";
+import { getDoctorById, setAllAppointments } from "../constants/api";
 import { getImageSrc } from "../constants/imagePath";
 import { verifiedIcon, infoIcon } from "../constants/icons";
 import RelatedDoctor from "../components/RelatedDoctor";
+import { useAuthType } from "../contexts/UseTypeContext";
+
+let appointmentDay;
+let appointmentTime;
 
 export default function AboutDoctor() {
   const { doctorID } = useParams();
   const [doctorData, setDoctorData] = useState(null);
+  const navigate = useNavigate();
+  const { isLogin, loggedInUser } = useAuthType();
 
   useEffect(() => {
     if (!doctorID) return;
@@ -35,6 +41,31 @@ export default function AboutDoctor() {
 
     fetchDoctorById();
   }, [doctorID]);
+
+  const handleBookAppointmentButton = async () => {
+    if (!isLogin) {
+      navigate("/login");
+      return;
+    }
+
+    try {
+      const response = await axios.post(setAllAppointments, {
+        userId: loggedInUser.id,
+        doctorId: doctorID,
+        doctorName: doctorData.name,
+        doctorType: doctorData.type,
+        doctorAddress: doctorData.address,
+        appointmentDay,
+        appointmentTime,
+      });
+
+      if (response.status === 200 || response.status === 201) {
+        toast("Appointment booked successfully");
+      }
+    } catch (e) {
+      toast(e.message ?? "Something went wrong");
+    }
+  };
 
   return (
     <section className="mt-36">
@@ -104,7 +135,10 @@ export default function AboutDoctor() {
                     ))}
                   </div>
                 </div>
-                <button className="bg-primary hover:bg-pm-hover cursor-pointer text-white rounded-full px-[100px] py-4 mt-9">
+                <button
+                  onClick={handleBookAppointmentButton}
+                  className="bg-primary hover:bg-pm-hover cursor-pointer text-white rounded-full px-[100px] py-4 mt-9"
+                >
                   Book an appointment
                 </button>
               </div>
@@ -123,6 +157,9 @@ export default function AboutDoctor() {
 
 const GenerateBookingDay = ({ day }) => {
   const [isDaySelectedTrue, setIsDaySelectedTrue] = useState(false);
+
+  if (isDaySelectedTrue) appointmentDay = day;
+
   return (
     <button
       onClick={() => setIsDaySelectedTrue(!isDaySelectedTrue)}
@@ -137,6 +174,8 @@ const GenerateBookingDay = ({ day }) => {
 
 const GenerateBookingTime = ({ time }) => {
   const [isTimeSelected, setIsTimeSelected] = useState(false);
+
+  if (isTimeSelected) appointmentTime = time;
 
   return (
     <button

@@ -7,7 +7,10 @@
       "isTopDoctor": true,
       "isAvailable": true,
       "image": "./src/assets/assets_frontend/doc1.png",
-      "degrees": ["MBBS", "MD (Internal Medicine)"],
+      "degrees": [
+        "MBBS",
+        "MD (Internal Medicine)"
+      ],
       "description": "Dr. Ayesha Rahman is a highly experienced dermatologist with over a decade of dedicated service in skin care. She specializes in treating common and chronic skin conditions and is known for her compassionate, patient-first approach.",
       "yearsOfExperience": 12,
       "appointmentFee": 1200,
@@ -15,8 +18,15 @@
         "street": "57th Cross, Richmond",
         "area": "Circle, Church Road, London"
       },
-      "bookingDays": ["Sat", "Sun", "Wed"],
-      "bookingTimes": ["8:00 AM", "5:00 PM"]
+      "bookingDays": [
+        "Sat",
+        "Sun",
+        "Wed"
+      ],
+      "bookingTimes": [
+        "8:00 AM",
+        "5:00 PM"
+      ]
     },
     {
       "id": "2",
@@ -25,7 +35,10 @@
       "isTopDoctor": false,
       "isAvailable": true,
       "image": "./src/assets/assets_frontend/doc2.png",
-      "degrees": ["MBBS", "Diploma in Family Medicine"],
+      "degrees": [
+        "MBBS",
+        "Diploma in Family Medicine"
+      ],
       "description": "Dr. Sameer Chowdhury provides holistic pediatric care with a focus on preventive medicine and long-term wellness. His approachable nature makes him a favorite among children and their parents.",
       "yearsOfExperience": 8,
       "appointmentFee": 1000,
@@ -33,8 +46,14 @@
         "street": "57th Cross, Richmond",
         "area": "Circle, Church Road, London"
       },
-      "bookingDays": ["Mon", "Thu"],
-      "bookingTimes": ["9:00 AM", "3:00 PM"]
+      "bookingDays": [
+        "Mon",
+        "Thu"
+      ],
+      "bookingTimes": [
+        "9:00 AM",
+        "3:00 PM"
+      ]
     },
     {
       "id": "3",
@@ -43,7 +62,10 @@
       "isTopDoctor": true,
       "isAvailable": true,
       "image": "./src/assets/assets_frontend/doc3.png",
-      "degrees": ["MBBS", "FCPS (Medicine)"],
+      "degrees": [
+        "MBBS",
+        "FCPS (Medicine)"
+      ],
       "description": "With a strong academic foundation and years of clinical practice, Dr. Nusrat Hossain excels in diagnosing complex gynecological conditions and managing women’s health across all ages.",
       "yearsOfExperience": 10,
       "appointmentFee": 1100,
@@ -51,8 +73,15 @@
         "street": "57th Cross, Richmond",
         "area": "Circle, Church Road, London"
       },
-      "bookingDays": ["Sun", "Wed", "Fri"],
-      "bookingTimes": ["10:00 AM", "6:00 PM"]
+      "bookingDays": [
+        "Sun",
+        "Wed",
+        "Fri"
+      ],
+      "bookingTimes": [
+        "10:00 AM",
+        "6:00 PM"
+      ]
     },
     {
       "id": "4",
@@ -61,7 +90,10 @@
       "isTopDoctor": true,
       "isAvailable": true,
       "image": "./src/assets/assets_frontend/doc4.png",
-      "degrees": ["MBBS", "MD"],
+      "degrees": [
+        "MBBS",
+        "MD"
+      ],
       "description": "Dr. Imran Ali blends modern clinical practices with deep empathy, ensuring his patients receive not just treatment but comprehensive care and education about their health conditions.",
       "yearsOfExperience": 15,
       "appointmentFee": 900,
@@ -69,8 +101,15 @@
         "street": "57th Cross, Richmond",
         "area": "Circle, Church Road, London"
       },
-      "bookingDays": ["Tue", "Thu", "Sat"],
-      "bookingTimes": ["8:30 AM", "4:30 PM"]
+      "bookingDays": [
+        "Tue",
+        "Thu",
+        "Sat"
+      ],
+      "bookingTimes": [
+        "8:30 AM",
+        "4:30 PM"
+      ]
     },
     {
       "id": "5",
@@ -79,7 +118,9 @@
       "isTopDoctor": false,
       "isAvailable": false,
       "image": "./src/assets/assets_frontend/doc6.png",
-      "degrees": ["MBBS"],
+      "degrees": [
+        "MBBS"
+      ],
       "description": "A young and passionate neurologist, Dr. Farzana Ahmed is committed to improving community health. Her areas of interest include migraines, epilepsy, and neurodevelopmental disorders.",
       "yearsOfExperience": 6,
       "appointmentFee": 950,
@@ -87,8 +128,14 @@
         "street": "57th Cross, Richmond",
         "area": "Circle, Church Road, London"
       },
-      "bookingDays": ["Wed", "Sat"],
-      "bookingTimes": ["7:00 AM", "2:00 PM"]
+      "bookingDays": [
+        "Wed",
+        "Sat"
+      ],
+      "bookingTimes": [
+        "7:00 AM",
+        "2:00 PM"
+      ]
     },
     {
       "id": "6",
@@ -97,7 +144,10 @@
       "isTopDoctor": true,
       "isAvailable": false,
       "image": "./src/assets/assets_frontend/doc6.png",
-      "degrees": ["MBBS", "MD"],
+      "degrees": [
+        "MBBS",
+        "MD"
+      ],
       "description": "With years of experience in both urban and rural healthcare facilities, Dr. Hasan Mahmud is adept at handling a wide range of digestive issues and believes in building strong doctor-patient relationships.",
       "yearsOfExperience": 13,
       "appointmentFee": 1050,
@@ -105,8 +155,14 @@
         "street": "57th Cross, Richmond",
         "area": "Circle, Church Road, London"
       },
-      "bookingDays": ["Sun", "Tue"],
-      "bookingTimes": ["11:00 AM", "6:00 PM"]
+      "bookingDays": [
+        "Sun",
+        "Tue"
+      ],
+      "bookingTimes": [
+        "11:00 AM",
+        "6:00 PM"
+      ]
     },
     {
       "id": "7",
@@ -115,7 +171,10 @@
       "isTopDoctor": true,
       "isAvailable": false,
       "image": "./src/assets/assets_frontend/doc7.png",
-      "degrees": ["MBBS", "Diploma in Clinical Pathology"],
+      "degrees": [
+        "MBBS",
+        "Diploma in Clinical Pathology"
+      ],
       "description": "Dr. Tasnim Jahan brings clinical accuracy to her consultations, with expertise in diagnostic medicine. She often collaborates with lab specialists to provide detailed treatment insights.",
       "yearsOfExperience": 9,
       "appointmentFee": 1150,
@@ -123,8 +182,14 @@
         "street": "57th Cross, Richmond",
         "area": "Circle, Church Road, London"
       },
-      "bookingDays": ["Thu", "Fri"],
-      "bookingTimes": ["10:30 AM", "5:30 PM"]
+      "bookingDays": [
+        "Thu",
+        "Fri"
+      ],
+      "bookingTimes": [
+        "10:30 AM",
+        "5:30 PM"
+      ]
     },
     {
       "id": "8",
@@ -133,7 +198,9 @@
       "isTopDoctor": false,
       "isAvailable": false,
       "image": "./src/assets/assets_frontend/doc8.png",
-      "degrees": ["MBBS"],
+      "degrees": [
+        "MBBS"
+      ],
       "description": "Known for his energy and friendly manner, Dr. Rafid Karim offers modern, evidence-based treatment approaches. He regularly engages in child health awareness programs.",
       "yearsOfExperience": 7,
       "appointmentFee": 1000,
@@ -141,8 +208,14 @@
         "street": "57th Cross, Richmond",
         "area": "Circle, Church Road, London"
       },
-      "bookingDays": ["Mon", "Wed"],
-      "bookingTimes": ["9:30 AM", "3:30 PM"]
+      "bookingDays": [
+        "Mon",
+        "Wed"
+      ],
+      "bookingTimes": [
+        "9:30 AM",
+        "3:30 PM"
+      ]
     },
     {
       "id": "9",
@@ -151,7 +224,10 @@
       "isTopDoctor": true,
       "isAvailable": false,
       "image": "./src/assets/assets_frontend/doc9.png",
-      "degrees": ["MBBS", "MD (Internal Medicine)"],
+      "degrees": [
+        "MBBS",
+        "MD (Internal Medicine)"
+      ],
       "description": "Dr. Mahfuz Rahim is well-versed in managing lifestyle-related neurological disorders and promotes a preventive approach to long-term brain health.",
       "yearsOfExperience": 11,
       "appointmentFee": 950,
@@ -159,8 +235,15 @@
         "street": "57th Cross, Richmond",
         "area": "Circle, Church Road, London"
       },
-      "bookingDays": ["Tue", "Fri", "Sat"],
-      "bookingTimes": ["8:00 AM", "6:00 PM"]
+      "bookingDays": [
+        "Tue",
+        "Fri",
+        "Sat"
+      ],
+      "bookingTimes": [
+        "8:00 AM",
+        "6:00 PM"
+      ]
     },
     {
       "id": "10",
@@ -169,7 +252,10 @@
       "isTopDoctor": true,
       "isAvailable": false,
       "image": "./src/assets/assets_frontend/doc10.png",
-      "degrees": ["MBBS", "FCPS"],
+      "degrees": [
+        "MBBS",
+        "FCPS"
+      ],
       "description": "Respected for her diagnostic precision and patient care philosophy, Dr. Lamiya Sultana ensures her patients are fully informed and involved in every skin-related treatment decision.",
       "yearsOfExperience": 14,
       "appointmentFee": 1200,
@@ -177,8 +263,14 @@
         "street": "57th Cross, Richmond",
         "area": "Circle, Church Road, London"
       },
-      "bookingDays": ["Sun", "Thu"],
-      "bookingTimes": ["7:30 AM", "1:00 PM"]
+      "bookingDays": [
+        "Sun",
+        "Thu"
+      ],
+      "bookingTimes": [
+        "7:30 AM",
+        "1:00 PM"
+      ]
     },
     {
       "id": "11",
@@ -187,7 +279,10 @@
       "isTopDoctor": true,
       "isAvailable": false,
       "image": "./src/assets/assets_frontend/doc11.png",
-      "degrees": ["MBBS", "MD"],
+      "degrees": [
+        "MBBS",
+        "MD"
+      ],
       "description": "Dr. Nabil Zaman combines scientific rigor with clear communication, making him a reliable physician for both acute and chronic digestive issues in all age groups.",
       "yearsOfExperience": 10,
       "appointmentFee": 1050,
@@ -195,8 +290,14 @@
         "street": "57th Cross, Richmond",
         "area": "Circle, Church Road, London"
       },
-      "bookingDays": ["Mon", "Fri"],
-      "bookingTimes": ["9:00 AM", "5:00 PM"]
+      "bookingDays": [
+        "Mon",
+        "Fri"
+      ],
+      "bookingTimes": [
+        "9:00 AM",
+        "5:00 PM"
+      ]
     },
     {
       "id": "12",
@@ -205,7 +306,10 @@
       "isTopDoctor": true,
       "isAvailable": true,
       "image": "./src/assets/assets_frontend/doc12.png",
-      "degrees": ["MBBS", "Diploma in Geriatric Medicine"],
+      "degrees": [
+        "MBBS",
+        "Diploma in Geriatric Medicine"
+      ],
       "description": "Dr. Rida Tabassum is a compassionate doctor dedicated to elderly care. Her warm demeanor and patience make her particularly suited to treating senior citizens with multiple comorbidities.",
       "yearsOfExperience": 8,
       "appointmentFee": 900,
@@ -213,8 +317,15 @@
         "street": "57th Cross, Richmond",
         "area": "Circle, Church Road, London"
       },
-      "bookingDays": ["Wed", "Sat", "Sun"],
-      "bookingTimes": ["10:00 AM", "4:00 PM"]
+      "bookingDays": [
+        "Wed",
+        "Sat",
+        "Sun"
+      ],
+      "bookingTimes": [
+        "10:00 AM",
+        "4:00 PM"
+      ]
     },
     {
       "id": "13",
@@ -223,7 +334,11 @@
       "isTopDoctor": true,
       "isAvailable": true,
       "image": "./src/assets/assets_frontend/doc13.png",
-      "degrees": ["MBBS", "FCPS", "DM"],
+      "degrees": [
+        "MBBS",
+        "FCPS",
+        "DM"
+      ],
       "description": "An expert neurologist and researcher, Dr. Azfar Siddiqui balances patient care with medical innovation. He mentors young doctors and participates in public health studies.",
       "yearsOfExperience": 16,
       "appointmentFee": 1100,
@@ -231,8 +346,15 @@
         "street": "57th Cross, Richmond",
         "area": "Circle, Church Road, London"
       },
-      "bookingDays": ["Tue", "Thu", "Sun"],
-      "bookingTimes": ["8:30 AM", "6:30 PM"]
+      "bookingDays": [
+        "Tue",
+        "Thu",
+        "Sun"
+      ],
+      "bookingTimes": [
+        "8:30 AM",
+        "6:30 PM"
+      ]
     },
     {
       "id": "14",
@@ -241,7 +363,9 @@
       "isTopDoctor": false,
       "isAvailable": false,
       "image": "./src/assets/assets_frontend/doc14.png",
-      "degrees": ["MBBS"],
+      "degrees": [
+        "MBBS"
+      ],
       "description": "Dr. Tania Ferdous is known for her excellent listening skills and holistic approach to women’s health. Her focus is on mental and physical well-being through personalized care.",
       "yearsOfExperience": 7,
       "appointmentFee": 950,
@@ -249,8 +373,14 @@
         "street": "57th Cross, Richmond",
         "area": "Circle, Church Road, London"
       },
-      "bookingDays": ["Mon", "Wed"],
-      "bookingTimes": ["9:00 AM", "4:00 PM"]
+      "bookingDays": [
+        "Mon",
+        "Wed"
+      ],
+      "bookingTimes": [
+        "9:00 AM",
+        "4:00 PM"
+      ]
     },
     {
       "id": "15",
@@ -259,7 +389,10 @@
       "isTopDoctor": true,
       "isAvailable": false,
       "image": "./src/assets/assets_frontend/doc15.png",
-      "degrees": ["MBBS", "MD"],
+      "degrees": [
+        "MBBS",
+        "MD"
+      ],
       "description": "With a strong presence in community child health events, Dr. Zayed Hassan is passionate about disease prevention and health literacy. His clinics are known for their friendly environment.",
       "yearsOfExperience": 9,
       "appointmentFee": 1000,
@@ -267,8 +400,14 @@
         "street": "57th Cross, Richmond",
         "area": "Circle, Church Road, London"
       },
-      "bookingDays": ["Fri", "Sat"],
-      "bookingTimes": ["8:00 AM", "5:00 PM"]
+      "bookingDays": [
+        "Fri",
+        "Sat"
+      ],
+      "bookingTimes": [
+        "8:00 AM",
+        "5:00 PM"
+      ]
     }
   ],
   "users": [
@@ -277,14 +416,14 @@
       "fullName": "Md. Shifat Bin Reza",
       "email": "shifatbinreza2@gmail.com",
       "password": "12345",
-      "phone": "Not given",
+      "phone": "01794775275",
       "address": {
-        "street": "Not given",
-        "city": "Not given",
-        "country": "Not given"
+        "street": "Department of Nicotine Control, Pabna Sadar, Pabna",
+        "city": "Pabna",
+        "country": "Bangladesh"
       },
-      "gender": "Not given",
-      "birth_date": "2025-08-30"
+      "gender": "Male",
+      "birth_date": "2025-08-26"
     },
     {
       "id": "4171",
@@ -330,6 +469,21 @@
       },
       "gender": "",
       "birth_date": ""
+    }
+  ],
+  "appointments": [
+    {
+      "id": "c77b",
+      "userId": "488a",
+      "doctorId": "9",
+      "doctorName": "Dr. Mahfuz Rahim",
+      "doctorType": "Neurologist",
+      "doctorAddress": {
+        "street": "57th Cross, Richmond",
+        "area": "Circle, Church Road, London"
+      },
+      "appointmentDay": "Tue",
+      "appointmentTime": "6:00 PM"
     }
   ]
 }

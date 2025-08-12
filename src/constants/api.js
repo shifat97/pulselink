@@ -22,6 +22,8 @@ const updateUserInformation = (id) => {
   return `http://localhost:3000/users/${id}`;
 };
 
+const setAllAppointments = "http://localhost:3000/appointments";
+
 export {
   allDoctors,
   filterByTopDoctor,
@@ -31,4 +33,5 @@ export {
   getTopDoctorByType,
   setRegisteredUser,
   updateUserInformation,
+  setAllAppointments,
 };
