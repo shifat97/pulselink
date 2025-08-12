@@ -484,6 +484,32 @@
       },
       "appointmentDay": "Tue",
       "appointmentTime": "6:00 PM"
+    },
+    {
+      "id": "60c6",
+      "userId": "488a",
+      "doctorId": "4",
+      "doctorName": "Dr. Imran Ali",
+      "doctorType": "General Physician",
+      "doctorAddress": {
+        "street": "57th Cross, Richmond",
+        "area": "Circle, Church Road, London"
+      },
+      "appointmentDay": "Sat",
+      "appointmentTime": "4:30 PM"
+    },
+    {
+      "id": "1a76",
+      "userId": "488a",
+      "doctorId": "11",
+      "doctorName": "Dr. Nabil Zaman",
+      "doctorType": "Gastroenterologist",
+      "doctorAddress": {
+        "street": "57th Cross, Richmond",
+        "area": "Circle, Church Road, London"
+      },
+      "appointmentDay": "Fri",
+      "appointmentTime": "5:00 PM"
     }
   ]
 }

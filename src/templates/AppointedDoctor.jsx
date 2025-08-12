@@ -10,9 +10,7 @@ export default function AppointedDoctor({ doctor }) {
   useEffect(() => {
     const fetchDoctorById = async () => {
       try {
-        const response = await axios.get(
-          getDoctorById(doctor.appointedDoctorID)
-        );
+        const response = await axios.get(getDoctorById(doctor.doctorId));
         const data = await response.data;
         setAppointedDoctor(data[0]);
       } catch (e) {
@@ -30,7 +28,7 @@ export default function AppointedDoctor({ doctor }) {
     };
 
     fetchDoctorById();
-  }, [doctor.appointedDoctorID]);
+  }, [doctor.doctorId]);
 
   return appointedDoctor ? (
     <div>
@@ -58,7 +56,7 @@ export default function AppointedDoctor({ doctor }) {
             <div className="flex items-center gap-2 mt-4">
               <h3 className="font-medium">Date & Time:</h3>
               <p className="text-gray1">
-                {doctor.appointmentDate} | {doctor.appointmentTime}
+                {doctor.appointmentDay} | {doctor.appointmentTime}
               </p>
             </div>
           </div>
