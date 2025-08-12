@@ -11,15 +11,15 @@ import infoIcon from "../assets/assets_frontend/info_icon.svg";
 import dropDownIcon from "../assets/assets_frontend/dropdown_icon.svg";
 
 export {
-    menu,
-    arrow_right,
-    general_physician,
-    gynecologist,
-    dermatologist,
-    pediatrician,
-    neurologist,
-    gastroenterologist,
-    verifiedIcon,
-    infoIcon,
-    dropDownIcon,
+  menu,
+  arrow_right,
+  general_physician,
+  gynecologist,
+  dermatologist,
+  pediatrician,
+  neurologist,
+  gastroenterologist,
+  verifiedIcon,
+  infoIcon,
+  dropDownIcon,
 };

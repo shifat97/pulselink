@@ -9,13 +9,13 @@ import uploadArea from "../assets/assets_frontend/upload_area.png";
 import profilePicture from "../assets/assets_frontend/profile_pic.png";
 
 export {
-    logo,
-    groupImages,
-    heroImage,
-    appointmentImage,
-    aboutImage,
-    contactImage,
-    profileImage,
-    uploadArea,
-    profilePicture,
+  logo,
+  groupImages,
+  heroImage,
+  appointmentImage,
+  aboutImage,
+  contactImage,
+  profileImage,
+  uploadArea,
+  profilePicture,
 };

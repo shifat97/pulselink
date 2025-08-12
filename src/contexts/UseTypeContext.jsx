@@ -3,9 +3,9 @@ import { TypeContext } from "./TypeContext";
 import { AuthContext } from "./AuthContext";
 
 export const useType = () => {
-    return useContext(TypeContext);
+  return useContext(TypeContext);
 };
 
 export const useAuthType = () => {
-    return useContext(AuthContext);
+  return useContext(AuthContext);
 };

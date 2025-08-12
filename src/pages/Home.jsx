@@ -5,14 +5,14 @@ import TopDoctors from "../components/TopDoctors";
 import { TypeProvider } from "../providers/TypeProvider";
 
 export default function Home() {
-    return (
-        <section>
-            <Hero />
-            <TypeProvider>
-                <Specialty />
-                <TopDoctors />
-            </TypeProvider>
-            <BookAppointment />
-        </section>
-    );
+  return (
+    <section>
+      <Hero />
+      <TypeProvider>
+        <Specialty />
+        <TopDoctors />
+      </TypeProvider>
+      <BookAppointment />
+    </section>
+  );
 }

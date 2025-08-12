@@ -12,36 +12,33 @@ import Login from "../pages/Login";
 import ProtectedRoute from "./ProtectedRoute";
 
 export default function AppRoutes() {
-    return (
-        <Routes>
-            <Route path="" element={<App />}>
-                <Route path="" element={<Home />}></Route>
-                <Route path="/all-doctors" element={<AllDoctors />}></Route>
-                <Route
-                    path="/doctors/:doctorID"
-                    element={<AboutDoctor />}
-                ></Route>
-                <Route path="about" element={<About />} />
-                <Route path="contact" element={<Contact />} />
-                <Route path="registration" element={<Registration />} />
-                <Route path="login" element={<Login />} />
-                <Route
-                    path="profile"
-                    element={
-                        <ProtectedRoute>
-                            <Profile />
-                        </ProtectedRoute>
-                    }
-                />
-                <Route
-                    path="my-appointment"
-                    element={
-                        <ProtectedRoute>
-                            <MyAppointment />
-                        </ProtectedRoute>
-                    }
-                />
-            </Route>
-        </Routes>
-    );
+  return (
+    <Routes>
+      <Route path="" element={<App />}>
+        <Route path="" element={<Home />}></Route>
+        <Route path="/all-doctors" element={<AllDoctors />}></Route>
+        <Route path="/doctors/:doctorID" element={<AboutDoctor />}></Route>
+        <Route path="about" element={<About />} />
+        <Route path="contact" element={<Contact />} />
+        <Route path="registration" element={<Registration />} />
+        <Route path="login" element={<Login />} />
+        <Route
+          path="profile"
+          element={
+            <ProtectedRoute>
+              <Profile />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="my-appointment"
+          element={
+            <ProtectedRoute>
+              <MyAppointment />
+            </ProtectedRoute>
+          }
+        />
+      </Route>
+    </Routes>
+  );
 }
