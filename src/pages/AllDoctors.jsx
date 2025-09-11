@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { doctors } from "../constants/doctors";
 import axios from "axios";
-import { allDoctors, getDoctorByType } from "../constants/api";
+import { allDoctors } from "../constants/api";
 import { ToastContainer, toast } from "../constants/toast";
 import Doctor from "../templates/Doctor";
 
@@ -17,16 +17,15 @@ export default function AllDoctors() {
     const fetchAllDoctors = async () => {
       setIsLoading(true);
       try {
-        let apiToCall;
-        if (doctorType === "All") {
-          apiToCall = allDoctors;
-        } else {
-          apiToCall = getDoctorByType(doctorType);
-        }
-
-        const response = await axios.get(apiToCall);
+        const response = await axios.get(allDoctors);
         const data = await response.data;
-        setDoctorsData(data);
+        
+        if (doctorType == 'All') {
+          setDoctorsData(data);
+        } else {
+          const filteredDoctors = data.filter(d => d.type == doctorType);
+          setDoctorsData(filteredDoctors);
+        }
       } catch (e) {
         toast(e.message ?? "Error while fetching data!", {
           position: "top-right",
