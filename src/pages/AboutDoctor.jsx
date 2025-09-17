@@ -163,9 +163,8 @@ const GenerateBookingDay = ({ day }) => {
   return (
     <button
       onClick={() => setIsDaySelectedTrue(!isDaySelectedTrue)}
-      className={`rounded-full font-medium w-[87px] py-4 mt-5 ${
-        isDaySelectedTrue ? "bg-primary text-white" : "border border-gray1"
-      }`}
+      className={`rounded-full font-medium w-[87px] py-4 mt-5 ${isDaySelectedTrue ? "bg-primary text-white" : "border border-gray1"
+        }`}
     >
       {day}
     </button>
@@ -180,9 +179,8 @@ const GenerateBookingTime = ({ time }) => {
   return (
     <button
       onClick={() => setIsTimeSelected(!isTimeSelected)}
-      className={`rounded-full font-medium px-8 py-3 mt-7 ${
-        isTimeSelected ? "bg-primary text-white" : "border border-gray1"
-      }`}
+      className={`rounded-full font-medium px-8 py-3 mt-7 ${isTimeSelected ? "bg-primary text-white" : "border border-gray1"
+        }`}
     >
       {time}
     </button>

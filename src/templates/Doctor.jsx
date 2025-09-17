@@ -5,16 +5,15 @@ const Doctor = ({ doctor }) => {
   const { id, image, name, type, isAvailable } = doctor;
 
   return (
-    <Link to={`/doctors/${id}`} className="block h-full">
+    <Link to={`/doctors/id=${id}`} className="block h-full">
       <div className="h-full bg-white rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden border border-gray-100 group">
         {/* Image Container with Badge */}
         <div className="relative h-44 sm:h-48 bg-gradient-to-br from-purple-100 via-purple-50 to-blue-50 overflow-hidden">
           {/* Availability Badge */}
-          <div className={`absolute top-3 right-3 z-10 px-3 py-1.5 rounded-full text-xs font-semibold flex items-center gap-1.5 backdrop-blur-sm ${
-            isAvailable 
-              ? "bg-green-500/90 text-white" 
+          <div className={`absolute top-3 right-3 z-10 px-3 py-1.5 rounded-full text-xs font-semibold flex items-center gap-1.5 backdrop-blur-sm ${isAvailable
+              ? "bg-green-500/90 text-white"
               : "bg-gray-500/90 text-white"
-          }`}>
+            }`}>
             <span className="relative flex h-2 w-2">
               {isAvailable && (
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
@@ -23,31 +22,31 @@ const Doctor = ({ doctor }) => {
             </span>
             {isAvailable ? "Available" : "Unavailable"}
           </div>
-          
+
           {/* Decorative Elements */}
           <div className="absolute -right-8 -top-8 w-32 h-32 bg-purple-200/20 rounded-full"></div>
           <div className="absolute -left-8 -bottom-8 w-24 h-24 bg-blue-200/20 rounded-full"></div>
-          
+
           {/* Doctor Image */}
           <div className="relative h-full flex items-end justify-center">
-            <img 
-              src={getImageSrc(image)} 
-              alt={name} 
+            <img
+              src={getImageSrc(image)}
+              alt={name}
               className="relative z-5 object-contain h-full w-auto max-w-full group-hover:scale-110 transition-transform duration-500"
             />
           </div>
-          
+
           {/* Gradient Overlay */}
           <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent opacity-60"></div>
         </div>
-        
+
         {/* Content */}
         <div className="p-4 sm:p-5">
           {/* Doctor Name */}
           <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-1 line-clamp-1 group-hover:text-purple-600 transition-colors">
             {name}
           </h3>
-          
+
           {/* Specialty */}
           <div className="flex items-center gap-2 mb-3">
             <svg className="w-4 h-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -55,7 +54,7 @@ const Doctor = ({ doctor }) => {
             </svg>
             <p className="text-sm text-gray-600 font-medium">{type}</p>
           </div>
-          
+
           {/* Action Button */}
           <div className="flex items-center justify-between pt-3 border-t border-gray-100">
             <div className="flex items-center gap-1">
@@ -65,7 +64,7 @@ const Doctor = ({ doctor }) => {
                 </svg>
               ))}
             </div>
-            
+
             <button className="flex items-center gap-1 text-purple-600 font-semibold text-sm group-hover:gap-2 transition-all">
               <span>View</span>
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
