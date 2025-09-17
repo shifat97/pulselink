@@ -19,7 +19,7 @@ export default function AllDoctors() {
       try {
         const response = await axios.get(allDoctors);
         const data = await response.data;
-        
+
         if (doctorType == 'All') {
           setDoctorsData(data);
         } else {
@@ -45,7 +45,7 @@ export default function AllDoctors() {
     fetchAllDoctors();
   }, [doctorType]);
 
-  const filteredDoctors = doctorsData.filter(doctor => 
+  const filteredDoctors = doctorsData.filter(doctor =>
     doctor.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
     doctor.type.toLowerCase().includes(searchTerm.toLowerCase())
   );
@@ -66,7 +66,7 @@ export default function AllDoctors() {
   return (
     <section className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50">
       <ToastContainer />
-      
+
       {/* Hero Header */}
       <div className="relative overflow-hidden bg-gradient-to-r from-purple-600 to-blue-600 px-4 py-12 sm:py-16 lg:py-20">
         <div className="absolute inset-0 bg-black opacity-10"></div>
@@ -78,7 +78,7 @@ export default function AllDoctors() {
             <p className="text-lg sm:text-xl text-purple-100 max-w-3xl mx-auto mb-8">
               Connect with top-rated specialists in your area. Book appointments instantly.
             </p>
-            
+
             {/* Search Bar */}
             <div className="max-w-2xl mx-auto">
               <div className="relative">
@@ -89,10 +89,10 @@ export default function AllDoctors() {
                   onChange={(e) => setSearchTerm(e.target.value)}
                   className="w-full px-6 py-4 pr-12 text-gray-900 bg-white rounded-full shadow-xl focus:outline-none focus:ring-4 focus:ring-purple-300 placeholder-gray-500"
                 />
-                <svg 
+                <svg
                   className="absolute right-4 top-1/2 -translate-y-1/2 w-6 h-6 text-gray-400"
-                  fill="none" 
-                  stroke="currentColor" 
+                  fill="none"
+                  stroke="currentColor"
                   viewBox="0 0 24 24"
                 >
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -101,7 +101,7 @@ export default function AllDoctors() {
             </div>
           </div>
         </div>
-        
+
         {/* Decorative circles */}
         <div className="absolute -top-4 -right-4 w-32 h-32 bg-white opacity-10 rounded-full"></div>
         <div className="absolute -bottom-8 -left-8 w-40 h-40 bg-white opacity-10 rounded-full"></div>
@@ -137,7 +137,7 @@ export default function AllDoctors() {
       {/* Main Content */}
       <div className="mx-auto max-w-7xl px-4 py-8 lg:py-12">
         <div className="flex flex-col lg:flex-row gap-8">
-          
+
           {/* Mobile Filter Toggle */}
           <div className="lg:hidden">
             <details className="group">
@@ -148,7 +148,7 @@ export default function AllDoctors() {
                 </svg>
               </summary>
               <div className="mt-4 space-y-2">
-                <FilterButtons 
+                <FilterButtons
                   doctorType={doctorType}
                   handleDoctorType={handleDoctorType}
                   specialtyIcons={specialtyIcons}
@@ -168,7 +168,7 @@ export default function AllDoctors() {
                   Filter by Specialty
                 </h3>
                 <div className="space-y-2">
-                  <FilterButtons 
+                  <FilterButtons
                     doctorType={doctorType}
                     handleDoctorType={handleDoctorType}
                     specialtyIcons={specialtyIcons}
@@ -214,7 +214,7 @@ export default function AllDoctors() {
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">No doctors found</h3>
                 <p className="text-gray-600 mb-6">
-                  {searchTerm 
+                  {searchTerm
                     ? `No results for "${searchTerm}". Try adjusting your search.`
                     : "Try selecting a different specialty or check back later."}
                 </p>
@@ -230,7 +230,7 @@ export default function AllDoctors() {
             ) : (
               <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6">
                 {filteredDoctors.map((doctor, index) => (
-                  <Doctor key={doctor.id || index} doctor={doctor} />
+                  <Doctor key={doctor._id || index} doctor={doctor} />
                 ))}
               </div>
             )}
@@ -243,7 +243,7 @@ export default function AllDoctors() {
 
 const FilterButtons = ({ doctorType, handleDoctorType, specialtyIcons }) => {
   const allCategories = [{ name: "All" }, ...doctors];
-  
+
   return (
     <>
       {allCategories.map((category, index) => (
@@ -252,8 +252,8 @@ const FilterButtons = ({ doctorType, handleDoctorType, specialtyIcons }) => {
           onClick={() => handleDoctorType(category.name)}
           className={`
             w-full flex items-center gap-3 px-4 py-3 rounded-xl font-medium transition-all duration-200
-            ${doctorType === category.name 
-              ? "bg-gradient-to-r from-purple-600 to-purple-700 text-white shadow-md transform scale-[1.02]" 
+            ${doctorType === category.name
+              ? "bg-gradient-to-r from-purple-600 to-purple-700 text-white shadow-md transform scale-[1.02]"
               : "bg-gray-50 text-gray-700 hover:bg-gray-100 hover:text-purple-600"
             }
           `}

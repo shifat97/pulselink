@@ -2,17 +2,17 @@ import { Link } from "react-router";
 import { getImageSrc } from "../constants/imagePath";
 
 const Doctor = ({ doctor }) => {
-  const { id, image, name, type, isAvailable } = doctor;
+  const { _id, image, name, type, isAvailable } = doctor;
 
   return (
-    <Link to={`/doctors/id=${id}`} className="block h-full">
+    <Link to={`/doctors/doctor?id=${_id}`} className="block h-full">
       <div className="h-full bg-white rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden border border-gray-100 group">
         {/* Image Container with Badge */}
         <div className="relative h-44 sm:h-48 bg-gradient-to-br from-purple-100 via-purple-50 to-blue-50 overflow-hidden">
           {/* Availability Badge */}
           <div className={`absolute top-3 right-3 z-10 px-3 py-1.5 rounded-full text-xs font-semibold flex items-center gap-1.5 backdrop-blur-sm ${isAvailable
-              ? "bg-green-500/90 text-white"
-              : "bg-gray-500/90 text-white"
+            ? "bg-green-500/90 text-white"
+            : "bg-gray-500/90 text-white"
             }`}>
             <span className="relative flex h-2 w-2">
               {isAvailable && (

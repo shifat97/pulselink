@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router";
+import { useLocation, useNavigate } from "react-router";
 import { ToastContainer, toast } from "../constants/toast";
 import { getDoctorById, setAllAppointments } from "../constants/api";
 import { getImageSrc } from "../constants/imagePath";
@@ -12,18 +12,21 @@ let appointmentDay;
 let appointmentTime;
 
 export default function AboutDoctor() {
-  const { doctorID } = useParams();
+  const location = useLocation();
+  const queryParams = new URLSearchParams(location.search);
+  const id = queryParams.get("id");
+
   const [doctorData, setDoctorData] = useState(null);
   const navigate = useNavigate();
   const { isLogin, loggedInUser } = useAuthType();
 
   useEffect(() => {
-    if (!doctorID) return;
+    if (!id) return;
 
     const fetchDoctorById = async () => {
       try {
-        const response = await axios.get(getDoctorById(doctorID));
-        const data = response.data[0];
+        const response = await axios.get(getDoctorById(id));
+        const data = response.data;
         setDoctorData(data);
       } catch (e) {
         toast(e.message ?? "Error while fetching data!", {
@@ -40,7 +43,7 @@ export default function AboutDoctor() {
     };
 
     fetchDoctorById();
-  }, [doctorID]);
+  }, [id]);
 
   const handleBookAppointmentButton = async () => {
     if (!isLogin) {
@@ -51,7 +54,7 @@ export default function AboutDoctor() {
     try {
       const response = await axios.post(setAllAppointments, {
         userId: loggedInUser.id,
-        doctorId: doctorID,
+        doctorId: id,
         doctorName: doctorData.name,
         doctorType: doctorData.type,
         doctorAddress: doctorData.address,
