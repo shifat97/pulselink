@@ -2,8 +2,8 @@ const allDoctors = "http://localhost:5000/doctors";
 const filterByTopDoctor = "http://localhost:5000/doctors/top";
 
 const getDoctorById = (id) => `http://localhost:5000/doctors/doctor?id=${id}`;
-const getDoctorByType = (type) => `http://localhost:5000/doctors/${type}`;
-const getTopDoctorByType = (type) => `http://localhost:3000/doctors?isTopDoctor=true&type=${type}`;
+const getDoctorByType = (type) => `http://localhost:5000/doctors/doctor?type=${type}`;
+const getTopDoctorByType = (type) => `http://localhost:5000/doctors/doctor?isTopDoctor=true&type=${type}`;
 
 
 const setRegisteredUser = () => {
