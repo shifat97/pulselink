@@ -14,8 +14,8 @@ const updateUserInformation = (id) => {
   return `http://localhost:3000/users/${id}`;
 };
 
-const setAllAppointments = "http://localhost:3000/appointments";
-const getAllAppointments = "http://localhost:3000/appointments";
+const setAllAppointments = "http://localhost:5000/appointments";
+const getAllAppointments = "http://localhost:5000/appointments";
 
 export {
   allDoctors,
