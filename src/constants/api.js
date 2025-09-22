@@ -10,6 +10,7 @@ const getTopDoctorByType = (type) =>
 // Auth APIS
 
 const setRegisteredUser = "http://localhost:5000/auth/sign-up";
+const loginUser = "http://localhost:5000/auth/sign-in";
 
 const updateUserInformation = (id) => {
   return `http://localhost:3000/users/${id}`;
@@ -25,6 +26,7 @@ export {
   getDoctorByType,
   getTopDoctorByType,
   setRegisteredUser,
+  loginUser,
   updateUserInformation,
   setAllAppointments,
   getAllAppointments,

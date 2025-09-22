@@ -10,7 +10,10 @@ export const AuthProvider = ({ children }) => {
   const changeUserLogin = (user) => {
     setIsLogin(true);
     setLoggedInUser(user);
-    localStorage.setItem("auth", JSON.stringify({ status: true, user }));
+    localStorage.setItem(
+      "auth",
+      JSON.stringify({ status: true, jwtToken: user.jwtToken, name: user.name })
+    );
   };
 
   // Logout: clear state and localStorage
