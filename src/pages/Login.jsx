@@ -30,6 +30,7 @@ const Login = () => {
 
       changeUserLogin({
         jwtToken: response.data.jwtToken,
+        _id: response.data._id,
         name: response.data.name,
         email: response.data.email,
       });

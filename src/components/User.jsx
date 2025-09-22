@@ -10,6 +10,8 @@ export default function User() {
   const { loggedInUser } = useAuthType();
   const menuRef = useRef(null);
 
+  const _id = loggedInUser?._id;
+
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (menuRef.current && !menuRef.current.contains(event.target)) {
@@ -101,7 +103,7 @@ export default function User() {
             {/* Menu Items */}
             <div className="py-2">
               <Link
-                to="/profile"
+                to={_id ? `/profile/${_id}` : '/profile'}
                 onClick={() => setToggleMenu(false)}
                 className="flex items-center gap-3 px-4 py-2.5 text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-colors"
               >

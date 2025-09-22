@@ -23,7 +23,7 @@ export default function AppRoutes() {
         <Route path="registration" element={<Registration />} />
         <Route path="login" element={<Login />} />
         <Route
-          path="profile"
+          path="/profile/:_id"
           element={
             <ProtectedRoute>
               <Profile />

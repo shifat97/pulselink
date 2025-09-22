@@ -15,14 +15,16 @@ export default function Profile() {
   const [updateBirthDate, setUpdateBirthDate] = useState("Not given");
 
   const { loggedInUser } = useAuthType();
-  const { id, fullName, email, phone, address, gender, birth_date } =
-    loggedInUser;
+  const _id = loggedInUser?._id;
+  const name = loggedInUser?.name;
+  const email = loggedInUser?.email;
 
-  const handleSaveInformation = async () => {
+  const handleSaveInformation = async (e) => {
+    e.preventDefault();
+
     try {
-      await axios.patch(updateUserInformation(id), {
-        id: id,
-        fullName: fullName,
+      await axios.patch(updateUserInformation(_id), {
+        fullName: name,
         email: email,
         phone: updatePhone,
         address: {
@@ -35,27 +37,6 @@ export default function Profile() {
       });
 
       toast("Update Successful");
-      localStorage.removeItem("auth");
-
-      localStorage.setItem(
-        "auth",
-        JSON.stringify({
-          status: true,
-          user: {
-            id: id,
-            fullName: fullName,
-            email: email,
-            phone: updatePhone,
-            address: {
-              street: updateStreet,
-              city: updateCity,
-              country: updateCountry,
-            },
-            gender: updateGender,
-            birth_date: updateBirthDate,
-          },
-        })
-      );
     } catch (e) {
       toast(e.message ?? "Update failed. Try again!");
     }
@@ -69,7 +50,7 @@ export default function Profile() {
         <img width={150} src={uploadArea} alt="" />
       </div>
       <div className="mt-5">
-        <h1 className="text-3xl font-medium">{fullName}</h1>
+        <h1 className="text-3xl font-medium">{name}</h1>
         <div className="h-[1px] w-full bg-black/20 mt-2 md:w-[645px]"></div>
         <div>
           <p className="text-black/30 text-16 mt-6 underline">
@@ -90,12 +71,12 @@ export default function Profile() {
                       type="text"
                       name="phone"
                       id="phone"
-                      placeholder={phone}
+                      placeholder={`Change: Value`}
                       onChange={(e) => setUpdatePhone(e.target.value)}
                     />
                   </td>
                 ) : (
-                  <td className="text-blue1 pl-[72px]">{phone}</td>
+                  <td className="text-blue1 pl-[72px]">{`Change: Value`}</td>
                 )}
               </tr>
               <tr>
@@ -108,7 +89,7 @@ export default function Profile() {
                         type="text"
                         name="street"
                         id="street"
-                        placeholder={address.street}
+                        placeholder={`Change: Value`}
                         onChange={(e) => setUpdateStreet(e.target.value)}
                       />
                       <input
@@ -116,7 +97,7 @@ export default function Profile() {
                         type="text"
                         name="city"
                         id="city"
-                        placeholder={address.city}
+                        placeholder={`Change: Value`}
                         onChange={(e) => setUpdateCity(e.target.value)}
                       />
                       <input
@@ -124,15 +105,15 @@ export default function Profile() {
                         type="text"
                         name="country"
                         id="country"
-                        placeholder={address.country}
+                        placeholder={`Change: Value`}
                         onChange={(e) => setUpdateCountry(e.target.value)}
                       />
                     </>
                   ) : (
                     <>
-                      <span className="block">{address.street}</span>
+                      <span className="block">{`Change: Value`}</span>
 
-                      <span>{address.city + " " + address.country}</span>
+                      <span>{`Change: Value`}</span>
                     </>
                   )}
                 </td>
@@ -153,12 +134,12 @@ export default function Profile() {
                       type="text"
                       name="gender"
                       id="gender"
-                      placeholder={gender}
+                      placeholder={`Change: Value`}
                       onChange={(e) => setUpdateGender(e.target.value)}
                     />
                   </td>
                 ) : (
-                  <td className="pl-[72px]">{gender}</td>
+                  <td className="pl-[72px]">{`Change: Value`}</td>
                 )}
               </tr>
               <tr>
@@ -174,7 +155,7 @@ export default function Profile() {
                     />
                   </td>
                 ) : (
-                  <td className="pl-[72px]">{birth_date}</td>
+                  <td className="pl-[72px]">{`Change: Value`}</td>
                 )}
               </tr>
             </tbody>

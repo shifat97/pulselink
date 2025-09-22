@@ -15,6 +15,7 @@ export const AuthProvider = ({ children }) => {
       JSON.stringify({
         status: true,
         jwtToken: user.jwtToken,
+        _id: user._id,
         name: user.name,
         email: user.email,
       })
@@ -35,6 +36,7 @@ export const AuthProvider = ({ children }) => {
       setIsLogin(true);
       setLoggedInUser({
         jwtToken: getLoginStateFromLS.jwtToken,
+        _id: getLoginStateFromLS._id,
         name: getLoginStateFromLS.name,
         email: getLoginStateFromLS.email,
       });
