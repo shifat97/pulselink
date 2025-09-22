@@ -12,7 +12,12 @@ export const AuthProvider = ({ children }) => {
     setLoggedInUser(user);
     localStorage.setItem(
       "auth",
-      JSON.stringify({ status: true, jwtToken: user.jwtToken, name: user.name })
+      JSON.stringify({
+        status: true,
+        jwtToken: user.jwtToken,
+        name: user.name,
+        email: user.email,
+      })
     );
   };
 
@@ -28,7 +33,11 @@ export const AuthProvider = ({ children }) => {
     const getLoginStateFromLS = JSON.parse(localStorage.getItem("auth"));
     if (getLoginStateFromLS && getLoginStateFromLS.status) {
       setIsLogin(true);
-      setLoggedInUser(getLoginStateFromLS.user);
+      setLoggedInUser({
+        jwtToken: getLoginStateFromLS.jwtToken,
+        name: getLoginStateFromLS.name,
+        email: getLoginStateFromLS.email,
+      });
     }
     setLoading(false);
   }, []);

@@ -31,6 +31,7 @@ const Login = () => {
       changeUserLogin({
         jwtToken: response.data.jwtToken,
         name: response.data.name,
+        email: response.data.email,
       });
       navigate("/");
     } catch (e) {
