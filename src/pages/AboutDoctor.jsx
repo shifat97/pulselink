@@ -53,11 +53,8 @@ export default function AboutDoctor() {
 
     try {
       const response = await axios.post(setAllAppointments, {
-        userId: loggedInUser.id,
+        userId: loggedInUser._id,
         doctorId: id,
-        doctorName: doctorData.name,
-        doctorType: doctorData.type,
-        doctorAddress: doctorData.address,
         appointmentDay,
         appointmentTime,
       });
@@ -166,8 +163,9 @@ const GenerateBookingDay = ({ day }) => {
   return (
     <button
       onClick={() => setIsDaySelectedTrue(!isDaySelectedTrue)}
-      className={`rounded-full font-medium w-[87px] py-4 mt-5 ${isDaySelectedTrue ? "bg-primary text-white" : "border border-gray1"
-        }`}
+      className={`rounded-full font-medium w-[87px] py-4 mt-5 ${
+        isDaySelectedTrue ? "bg-primary text-white" : "border border-gray1"
+      }`}
     >
       {day}
     </button>
@@ -182,8 +180,9 @@ const GenerateBookingTime = ({ time }) => {
   return (
     <button
       onClick={() => setIsTimeSelected(!isTimeSelected)}
-      className={`rounded-full font-medium px-8 py-3 mt-7 ${isTimeSelected ? "bg-primary text-white" : "border border-gray1"
-        }`}
+      className={`rounded-full font-medium px-8 py-3 mt-7 ${
+        isTimeSelected ? "bg-primary text-white" : "border border-gray1"
+      }`}
     >
       {time}
     </button>

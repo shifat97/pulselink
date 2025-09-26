@@ -12,7 +12,7 @@ const getTopDoctorByType = (type) =>
 const setRegisteredUser = "http://localhost:5000/auth/sign-up";
 const loginUser = "http://localhost:5000/auth/sign-in";
 const updateUserInformation = (id) => `http://localhost:5000/auth/user/${id}`;
-const setAllAppointments = "http://localhost:5000/appointments";
+const setAllAppointments = "http://localhost:5000/appointments/create";
 const getAllAppointments = "http://localhost:5000/appointments";
 
 export {
